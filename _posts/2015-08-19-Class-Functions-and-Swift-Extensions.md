@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Using Class Functions in Swift Extensions
@@ -8,7 +7,6 @@ title: Using Class Functions in Swift Extensions
 During a recent experimentation with Swift’s extensions, I was reminded about the important distinctions between class and instance methods. I was writing a simple extension of UIColor to save me from retyping the rgb values and converting them to floats. My first attempt looked like this:
 
 {% highlight swift %}
-
 
 extension UIColor{
 func lightRedColor()-> UIColor {
