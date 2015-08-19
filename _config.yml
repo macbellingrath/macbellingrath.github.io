@@ -5,9 +5,9 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Poole
-tagline:             The Jekyll Butler
-url:                 http://getpoole.com
+title:               Mac Bellingrath
+tagline:             Developer
+url:                 http://macbellingrath.com
 paginate:            1
 baseurl:             ""
 
@@ -25,10 +25,9 @@ pages_list:
   
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
-
+  name:              Mac Bellingrath    
+  url:               https://twitter.com/mbellingrath
+  email:             macbellingrath@gmail.com
 # Custom vars
 version:             2.0.0
 github:
