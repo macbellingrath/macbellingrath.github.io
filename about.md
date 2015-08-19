@@ -15,6 +15,6 @@ I'm a software developer. I code in Swift and Objective-C, and am constantly lea
 * My day is not complete without a good run. 
 * ..or a good meal
 
-Have questions or suggestions? Feel free to [get in touch](mailto:macbellingrath@gmail.com or [ask me on Twitter](https://twitter.com/mbellingrath).
+Have questions or suggestions? Feel free to [ask me on Twitter](https://twitter.com/mbellingrath).
 
 Thanks for visiting!
