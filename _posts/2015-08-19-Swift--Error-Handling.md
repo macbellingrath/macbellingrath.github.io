@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Swift-er Error Handling 
+comments: True
 ---
 
 My initial impression of do/try/catch in Swift 2 was that it would only make my code longer and more complex. I was comfortable using optionals and simply checking/ unwrapping them with if/let syntax. Further reading has prompted me to realize that the new error-handling model is better for several reasons:

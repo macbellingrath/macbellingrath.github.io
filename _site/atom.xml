@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Mac Bellingrath</title>
+ <link href="http://macbellingrath.com/atom.xml" rel="self"/>
+ <link href="http://macbellingrath.com/"/>
+ <updated>2015-08-19T17:43:23-04:00</updated>
+ <id>http://macbellingrath.com</id>
+ <author>
+   <name>Mac Bellingrath</name>
+   <email>macbellingrath@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Swift-er Error Handling</title>
+   <link href="http://macbellingrath.com/2015/08/19/Swift--Error-Handling/"/>
+   <updated>2015-08-19T00:00:00-04:00</updated>
+   <id>http://macbellingrath.com/2015/08/19/Swift--Error-Handling</id>
+   <content type="html">&lt;p&gt;My initial impression of do/try/catch in Swift 2 was that it would only make my code longer and more complex. I was comfortable using optionals and simply checking/ unwrapping them with if/let syntax. Further reading has prompted me to realize that the new error-handling model is better for several reasons:&lt;/p&gt;
+
+&lt;p&gt;When you simply check that an optional is non-nil, you aren’t really handling the error. Throwing and catching errors forces you to deal with the errors rather than skip execution.
+Do/try/catch allows you to recover. If you catch the errors thrown by the method that you are calling in the do{} block, you’ll be able to recover and tell your user what’s going on.
+Writing your error enum (with ErrorType conformance) encourages you to think more intently about the possible error cases during development rather than when bugs start popping up.
+—–&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Guard Statements and Throwing Errors</title>
+   <link href="http://macbellingrath.com/2015/08/19/Guard-Statements-and-Throwing-Errors/"/>
+   <updated>2015-08-19T00:00:00-04:00</updated>
+   <id>http://macbellingrath.com/2015/08/19/Guard-Statements-and-Throwing-Errors</id>
+   <content type="html">&lt;p&gt;Today, I learned more about using the guard statement and how to throw and catch errors. In my playground, I have written a function to make some cookies. The function accepts one argument, an array of type string. By marking my function with the ‘throws’ keyword, I am telling the compiler that my function is capable of throwing errors. When calling this function, one will be required ( by the compiler ) to call within a ‘do’ block, and must “try” and “catch”, appropriately. 
+Guard is a lot like ‘if’ in swift, except that it is always followed by an ‘else’ clause. The guard statement is evaluated, and if false, executes the code inside the ‘else’ clause. You can have many guard statements after another, but after your code evaluates a guard statement to be false, it will execute the else clause and skip to the end of the function. 
+I begin by declaring a variable named ‘pantry,’ initialized with an array of the ingredients in my pantry. I then try my ‘makeCookies’ function, passing in the pantry array. You can see that the function is throwing cookieErrors.NotEnoughButter. Because the error was caught, the playground prints out “You’re gonna need some butter.”
+I’m excited to learn more about error handling, and how I can improve the readability and intent of my code.
+&lt;img src=&quot;https://raw.githubusercontent.com/macbellingrath/macbellingrath.github.io/master/Assets/1439839511_thumb.png&quot; alt=&quot;Guard Statement Playground&quot; /&gt;
+—–&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Getters and Setters</title>
+   <link href="http://macbellingrath.com/2015/08/19/Getters-and-Setters/"/>
+   <updated>2015-08-19T00:00:00-04:00</updated>
+   <id>http://macbellingrath.com/2015/08/19/Getters-and-Setters</id>
+   <content type="html">&lt;p&gt;Properties can have getters and setters that offer a lot of convenience, especially in cases where you are doing a lot of calculation. After the declaration, all you have to do is write get and set, each followed by a set of curly braces. With these types of computed properties, we can determine the value of a variable by calculation. The setter allows us to set the values of other related variables when a new value is assigned to the computed property.
+&lt;img src=&quot;https://raw.githubusercontent.com/macbellingrath/macbellingrath.github.io/master/Assets/getset.png&quot; alt=&quot;Playground&quot; /&gt;
+—–&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Using Class Functions in Swift Extensions</title>
+   <link href="http://macbellingrath.com/2015/08/19/Class-Functions-and-Swift-Extensions/"/>
+   <updated>2015-08-19T00:00:00-04:00</updated>
+   <id>http://macbellingrath.com/2015/08/19/Class-Functions-and-Swift-Extensions</id>
+   <content type="html">&lt;p&gt;During a recent experimentation with Swift’s extensions, I was reminded about the important distinctions between class and instance methods. I was writing a simple extension of UIColor to save me from retyping the rgb values and converting them to floats. My first attempt looked like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;extension&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lightRedColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIColor&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;144&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;89&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;When I went to declare my color variable, Xcode wouldn’t let me call my new function on UIColor. Instead, I would have had to create an instance using a predefined public class method declared in UIColor and then call my function on that instance.&lt;/p&gt;
+
+&lt;p&gt;It might look like this garbage:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lightGrayColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lightRedColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;When I looked at the declaration for .lightGrayColor(), I realized that it must be declared as a class function, not as an instance method.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;extension&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lightRedColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIColor&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;144&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;89&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And now, I can call my function on UIColor.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lightRedColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;it-was-a-simple-error-but-it-served-as-a-good-reminder-to-me-to-pay-attention-to-when-i-should-be-marking-my-functions-with-the-class-keyword&quot;&gt;It was a simple error, but it served as a good reminder to me to pay attention to when I should be marking my functions with the class keyword.&lt;/h2&gt;
+
+</content>
+ </entry>
+ 
+
+</feed>
