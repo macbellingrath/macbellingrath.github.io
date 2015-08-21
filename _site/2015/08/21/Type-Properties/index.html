@@ -10,7 +10,7 @@
 
   <title>
     
-      Getters and Setters &middot; Mac Bellingrath
+      Type Properties &middot; Mac Bellingrath
     
   </title>
 
@@ -60,12 +60,34 @@
       <main>
           
         <article class="post">
-  <h1 class="post-title">Getters and Setters</h1>
-  <time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time>
-  <p>Properties can have getters and setters that offer a lot of convenience, especially in cases where you are doing a lot of calculation. After the declaration, all you have to do is write get and set, each followed by a set of curly braces. With these types of computed properties, we can determine the value of a variable by calculation. The setter allows us to set the values of other related variables when a new value is assigned to the computed property.
-<img src="https://raw.githubusercontent.com/macbellingrath/macbellingrath.github.io/master/Assets/getset.png" alt="Playground" />
-—–</p>
+  <h1 class="post-title">Type Properties</h1>
+  <time datetime="2015-08-21T00:00:00-04:00" class="post-date">21 Aug 2015</time>
+  <p>In addition to instance properties, structs, enums, and classes can also have type properties. The difference is that instance properties belong to an instance, and type properties belong to the type. For example, if we had a struct ‘Fruit’ and declared a stored instance property variable ‘name,’ every time that we created an instance of that struct, it would have its own unique value for that property.</p>
 
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">Fruit</span> <span class="p">{</span>
+    
+    <span class="k">var</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="o">!</span>
+    
+<span class="p">}</span></code></pre></div>
+
+<p>So we could create an instance of Fruit and assign it the name of “banana”.</p>
+
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">banana</span> <span class="o">=</span> <span class="n">Fruit</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;banana&quot;</span><span class="p">)</span></code></pre></div>
+
+<p>So we have our banana, but what if we wanted to give our Fruit struct a property that applied to <em>all</em> fruit? This is where <strong>type</strong> properties come in. Type properties do not belong to each instance of the type, but to the type itself. This means that there is only one copy of a specific type property, regardless of how many instances of the type that we have. Let’s say that we want to declare a constant that would apply to all fruit, perhaps the recommended servings per day:</p>
+
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">Fruit</span> <span class="p">{</span>    
+    <span class="k">static</span> <span class="k">let</span> <span class="n">recommendedServingsPerDay</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="k">var</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="o">!</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Notice the use of the keyword <strong>Static</strong> at the beginning of the declaration. This indicates that this constant belongs to our Fruit type, not to individual instances of Fruit. If I were to type something like:</p>
+
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">print</span><span class="p">(</span><span class="n">banana</span><span class="p">.</span><span class="n">reommendedServingsPerDay</span><span class="p">)</span></code></pre></div>
+
+<p>The compiler will tell you that Fruit does not have a member named recommendedServingsPerDay, and this is true because recommendedServingsPerDay belongs to our <em>type</em>.</p>
+
+<p>Note that stored type properties must be given a default value, unlike stored instance properties.</p>
 
     
 <div id="disqus_thread"></div>
@@ -91,15 +113,6 @@
     
       <li>
         <h3>
-          <a href="/2015/08/21/Type-Properties/">
-            Type Properties
-            <small><time datetime="2015-08-21T00:00:00-04:00">21 Aug 2015</time></small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
           <a href="/2015/08/19/Swift--Error-Handling/">
             Swift-er Error Handling
             <small><time datetime="2015-08-19T00:00:00-04:00">19 Aug 2015</time></small>
@@ -111,6 +124,15 @@
         <h3>
           <a href="/2015/08/19/Guard-Statements-and-Throwing-Errors/">
             Guard Statements and Throwing Errors
+            <small><time datetime="2015-08-19T00:00:00-04:00">19 Aug 2015</time></small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/08/19/Getters-and-Setters/">
+            Getters and Setters
             <small><time datetime="2015-08-19T00:00:00-04:00">19 Aug 2015</time></small>
           </a>
         </h3>
