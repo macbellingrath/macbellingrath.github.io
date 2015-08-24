@@ -63,18 +63,18 @@
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/2015/08/19/Guard-Statements-and-Throwing-Errors/">
-        Guard Statements and Throwing Errors
+      <a href="/2015/08/19/Swift--Error-Handling/">
+        Swift-er Error Handling
       </a>
     </h1>
 
     <time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time>
 
-    <p>Today, I learned more about using the guard statement and how to throw and catch errors. In my playground, I have written a function to make some cookies. The function accepts one argument, an array of type string. By marking my function with the ‘throws’ keyword, I am telling the compiler that my function is capable of throwing errors. When calling this function, one will be required ( by the compiler ) to call within a ‘do’ block, and must “try” and “catch”, appropriately. 
-Guard is a lot like ‘if’ in swift, except that it is always followed by an ‘else’ clause. The guard statement is evaluated, and if false, executes the code inside the ‘else’ clause. You can have many guard statements after another, but after your code evaluates a guard statement to be false, it will execute the else clause and skip to the end of the function. 
-I begin by declaring a variable named ‘pantry,’ initialized with an array of the ingredients in my pantry. I then try my ‘makeCookies’ function, passing in the pantry array. You can see that the function is throwing cookieErrors.NotEnoughButter. Because the error was caught, the playground prints out “You’re gonna need some butter.”
-I’m excited to learn more about error handling, and how I can improve the readability and intent of my code.
-<img src="https://raw.githubusercontent.com/macbellingrath/macbellingrath.github.io/master/Assets/1439839511_thumb.png" alt="Guard Statement Playground" />
+    <p>My initial impression of do/try/catch in Swift 2 was that it would only make my code longer and more complex. I was comfortable using optionals and simply checking/ unwrapping them with if/let syntax. Further reading has prompted me to realize that the new error-handling model is better for several reasons:</p>
+
+<p>When you simply check that an optional is non-nil, you aren’t really handling the error. Throwing and catching errors forces you to deal with the errors rather than skip execution.
+Do/try/catch allows you to recover. If you catch the errors thrown by the method that you are calling in the do{} block, you’ll be able to recover and tell your user what’s going on.
+Writing your error enum (with ErrorType conformance) encourages you to think more intently about the possible error cases during development rather than when bugs start popping up.
 —–</p>
 
 
@@ -95,7 +95,7 @@ I’m excited to learn more about error handling, and how I can improve the read
       </main>
       <footer class="footer">
         <small>
-          &copy; <time datetime="2015-08-21T11:26:35-04:00">2015</time>. All rights reserved.
+          &copy; <time datetime="2015-08-24T16:16:59-04:00">2015</time>. All rights reserved.
         </small>
       </footer>
     </div>
