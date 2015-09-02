@@ -2,6 +2,7 @@
 layout: post
 title: Type Properties
 comments: True
+description: In addition to instance properties, structs, enums, and classes can also have type properties. The difference is that instance properties belong to an instance, and type properties belong to the type. 
 ---
 In addition to instance properties, structs, enums, and classes can also have type properties. The difference is that instance properties belong to an instance, and type properties belong to the type. For example, if we had a struct ‘Fruit’ and declared a stored instance property variable ‘name,’ every time that we created an instance of that struct, it would have its own unique value for that property. 
 
