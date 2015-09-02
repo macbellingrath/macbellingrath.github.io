@@ -32,5 +32,4 @@ func swapTwoValues<T>(inout a: T, inout _ b: T)
 
 {% endhighlight %}
 
-In the method body, you can use the generic type parameter similarly to a local variable. 
-It is common to see these type parameters as <T>. The capitalization will help you remember that these are types and not values.  
+In the method body, you can use the generic type parameter in the place where you might normally use a local variable name.
