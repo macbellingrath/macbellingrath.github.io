@@ -20,7 +20,7 @@
   <meta content="" property="og:description">
 
 
-  <meta content="http://macbellingrath.com/page5/" property="og:url">
+  <meta content="http://macbellingrath.com/page7/" property="og:url">
 
 
 
@@ -81,18 +81,15 @@
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/2015/08/19/Swift--Error-Handling/">
-        Swift-er Error Handling
+      <a href="/2015/08/19/Getters-and-Setters/">
+        Getters and Setters
       </a>
     </h1>
 
     <time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time>
 
-    <p>My initial impression of do/try/catch in Swift 2 was that it would only make my code longer and more complex. I was comfortable using optionals and simply checking/ unwrapping them with if/let syntax. Further reading has prompted me to realize that the new error-handling model is better for several reasons:</p>
-
-<p>When you simply check that an optional is non-nil, you aren’t really handling the error. Throwing and catching errors forces you to deal with the errors rather than skip execution.
-Do/try/catch allows you to recover. If you catch the errors thrown by the method that you are calling in the do{} block, you’ll be able to recover and tell your user what’s going on.
-Writing your error enum (with ErrorType conformance) encourages you to think more intently about the possible error cases during development rather than when bugs start popping up.
+    <p>Properties can have getters and setters that offer a lot of convenience, especially in cases where you are doing a lot of calculation. After the declaration, all you have to do is write get and set, each followed by a set of curly braces. With these types of computed properties, we can determine the value of a variable by calculation. The setter allows us to set the values of other related variables when a new value is assigned to the computed property.
+<img src="https://raw.githubusercontent.com/macbellingrath/macbellingrath.github.io/master/Assets/getset.png" alt="Playground" />
 —–</p>
 
 
@@ -102,10 +99,10 @@ Writing your error enum (with ErrorType conformance) encourages you to think mor
 
 <div class="pagination">
   
-    <a class="pagination-item older" href="/page6">Older</a>
+    <a class="pagination-item older" href="/page8">Older</a>
   
   
-    <a class="pagination-item newer" href="/page4">Newer</a>
+    <a class="pagination-item newer" href="/page6">Newer</a>
   
 </div>
 

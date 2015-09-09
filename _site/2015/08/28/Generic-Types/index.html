@@ -11,7 +11,7 @@
 
   <meta content="Mac Bellingrath" property="og:site_name">
 
-  <meta content="Getters and Setters" property="og:title">
+  <meta content="Generic Types" property="og:title">
 
 
   <meta content="article" property="og:type">
@@ -20,17 +20,17 @@
   <meta content="" property="og:description">
 
 
-  <meta content="http://macbellingrath.com/2015/08/19/Getters-and-Setters/" property="og:url">
+  <meta content="http://macbellingrath.com/2015/08/28/Generic-Types/" property="og:url">
 
 
-  <meta content="2015-08-19T00:00:00-04:00" property="article:published_time">
+  <meta content="2015-08-28T00:00:00-04:00" property="article:published_time">
   <meta content="http://macbellingrath.com/about/" property="article:author">
 
 
 
   <title>
     
-      Getters and Setters &middot; Mac Bellingrath
+      Generic Types &middot; Mac Bellingrath
     
   </title>
 
@@ -81,12 +81,28 @@
       <main>
           
         <article class="post">
-  <h1 class="post-title">Getters and Setters</h1>
-  <time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time>
-  <p>Properties can have getters and setters that offer a lot of convenience, especially in cases where you are doing a lot of calculation. After the declaration, all you have to do is write get and set, each followed by a set of curly braces. With these types of computed properties, we can determine the value of a variable by calculation. The setter allows us to set the values of other related variables when a new value is assigned to the computed property.
-<img src="https://raw.githubusercontent.com/macbellingrath/macbellingrath.github.io/master/Assets/getset.png" alt="Playground" />
-—–</p>
+  <h1 class="post-title">Generic Types</h1>
+  <time datetime="2015-08-28T00:00:00-04:00" class="post-date">28 Aug 2015</time>
+  <p>Swift is a fantastic programming language for many reasons. For beginners and experienced programmers alike, Swift offers a lot. As someone new to programming, Swift’s syntax is expressive and easy to understand. Experienced programmers will enjoy Swift’s modern language features and capabilities. Generics are interesting to me, and I’ve become more comfortable with them as I’ve learned more about Swift.</p>
 
+<h3 id="about-generics">About generics</h3>
+<p>Generics are self-describing. In Swift, generics allow you to write flexible code that avoids redundancy, but retains clarity. As an example, the swap method in the Swift standard library enables you to swap two instances, as long as they are of the same type. This is achieved through generics.</p>
+
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">var</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="n">print</span><span class="p">(</span><span class="s">&quot;a is now \(a) and b is now \(b)&quot;</span><span class="p">)</span>
+<span class="c1">//prints &quot;a is now 2 and b is now 1&quot;</span></code></pre></div>
+
+<p>Arrays and Dictionaries are, in fact, generic collections. They hold values of any specified type.</p>
+
+<h3 id="type-parameters">Type parameters</h3>
+<p>You specify a name for a generic parameter by putting the <em>placeholder</em> after the function name, in angle brackets.</p>
+
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="n">swapTwoValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">inout</span> <span class="nl">a</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="k">inout</span> <span class="n">_</span> <span class="nl">b</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span></code></pre></div>
+
+<p>In the method body, you can use the generic type parameter in the place where you might normally use a local variable name.</p>
 
     
 <div id="disqus_thread"></div>
@@ -121,18 +137,18 @@
     
       <li>
         <h3>
-          <a href="/2015/08/28/Generic-Types/">
-            Generic Types
-            <small><time datetime="2015-08-28T00:00:00-04:00">28 Aug 2015</time></small>
+          <a href="/2015/08/24/Reference-Cycles/">
+            Reference Cycles
+            <small><time datetime="2015-08-24T00:00:00-04:00">24 Aug 2015</time></small>
           </a>
         </h3>
       </li>
     
       <li>
         <h3>
-          <a href="/2015/08/24/Reference-Cycles/">
-            Reference Cycles
-            <small><time datetime="2015-08-24T00:00:00-04:00">24 Aug 2015</time></small>
+          <a href="/2015/08/21/Type-Properties/">
+            Type Properties
+            <small><time datetime="2015-08-21T00:00:00-04:00">21 Aug 2015</time></small>
           </a>
         </h3>
       </li>

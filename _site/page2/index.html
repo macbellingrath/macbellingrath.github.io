@@ -7,12 +7,30 @@
 
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+  <meta content="Mac Bellingrath" property="og:site_name">
+
+  <meta content="Home" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="" property="og:description">
+
+
+  <meta content="http://macbellingrath.com/page2/" property="og:url">
+
+
+
 
   <title>
     
       Mac Bellingrath &middot; Developer
     
   </title>
+
 
   <!-- CSS -->
   <link rel="stylesheet" href="/styles.css">
@@ -63,39 +81,33 @@
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/2015/08/21/Type-Properties/">
-        Type Properties
+      <a href="/2015/08/28/Generic-Types/">
+        Generic Types
       </a>
     </h1>
 
-    <time datetime="2015-08-21T00:00:00-04:00" class="post-date">21 Aug 2015</time>
+    <time datetime="2015-08-28T00:00:00-04:00" class="post-date">28 Aug 2015</time>
 
-    <p>In addition to instance properties, structs, enums, and classes can also have type properties. The difference is that instance properties belong to an instance, and type properties belong to the type. For example, if we had a struct ‘Fruit’ and declared a stored instance property variable ‘name,’ every time that we created an instance of that struct, it would have its own unique value for that property.</p>
+    <p>Swift is a fantastic programming language for many reasons. For beginners and experienced programmers alike, Swift offers a lot. As someone new to programming, Swift’s syntax is expressive and easy to understand. Experienced programmers will enjoy Swift’s modern language features and capabilities. Generics are interesting to me, and I’ve become more comfortable with them as I’ve learned more about Swift.</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">Fruit</span> <span class="p">{</span>
-    
-    <span class="k">var</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="o">!</span>
-    
-<span class="p">}</span></code></pre></div>
+<h3 id="about-generics">About generics</h3>
+<p>Generics are self-describing. In Swift, generics allow you to write flexible code that avoids redundancy, but retains clarity. As an example, the swap method in the Swift standard library enables you to swap two instances, as long as they are of the same type. This is achieved through generics.</p>
 
-<p>So we could create an instance of Fruit and assign it the name of “banana”.</p>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">var</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">banana</span> <span class="o">=</span> <span class="n">Fruit</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;banana&quot;</span><span class="p">)</span></code></pre></div>
+<span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="n">print</span><span class="p">(</span><span class="s">&quot;a is now \(a) and b is now \(b)&quot;</span><span class="p">)</span>
+<span class="c1">//prints &quot;a is now 2 and b is now 1&quot;</span></code></pre></div>
 
-<p>So we have our banana, but what if we wanted to give our Fruit struct a property that applied to <em>all</em> fruit? This is where <strong>type</strong> properties come in. Type properties do not belong to each instance of the type, but to the type itself. This means that there is only one copy of a specific type property, regardless of how many instances of the type that we have. Let’s say that we want to declare a constant that would apply to all fruit, perhaps the recommended servings per day:</p>
+<p>Arrays and Dictionaries are, in fact, generic collections. They hold values of any specified type.</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">Fruit</span> <span class="p">{</span>    
-    <span class="k">static</span> <span class="k">let</span> <span class="n">recommendedServingsPerDay</span> <span class="o">=</span> <span class="mi">9</span>
-    <span class="k">var</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="o">!</span>
-<span class="p">}</span></code></pre></div>
+<h3 id="type-parameters">Type parameters</h3>
+<p>You specify a name for a generic parameter by putting the <em>placeholder</em> after the function name, in angle brackets.</p>
 
-<p>Notice the use of the keyword <strong>Static</strong> at the beginning of the declaration. This indicates that this constant belongs to our Fruit type, not to individual instances of Fruit. If I were to type something like:</p>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="n">swapTwoValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">inout</span> <span class="nl">a</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="k">inout</span> <span class="n">_</span> <span class="nl">b</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span></code></pre></div>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">print</span><span class="p">(</span><span class="n">banana</span><span class="p">.</span><span class="n">reommendedServingsPerDay</span><span class="p">)</span></code></pre></div>
-
-<p>The compiler will tell you that Fruit does not have a member named recommendedServingsPerDay, and this is true because recommendedServingsPerDay belongs to our <em>type</em>.</p>
-
-<p>Note that stored type properties must be given a default value, unlike stored instance properties.</p>
+<p>In the method body, you can use the generic type parameter in the place where you might normally use a local variable name.</p>
 
   </article>
   
@@ -114,7 +126,7 @@
       </main>
       <footer class="footer">
         <small>
-          &copy; <time datetime="2015-08-24T16:16:59-04:00">2015</time>. All rights reserved.
+          &copy; <time datetime="2015-09-09T11:06:07-04:00">2015</time>. All rights reserved.
         </small>
       </footer>
     </div>
