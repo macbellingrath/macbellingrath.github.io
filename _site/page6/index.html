@@ -11,7 +11,7 @@
 
   <meta content="Mac Bellingrath" property="og:site_name">
 
-  <meta content="Guard Statements and Throwing Errors" property="og:title">
+  <meta content="Home" property="og:title">
 
 
   <meta content="article" property="og:type">
@@ -20,17 +20,14 @@
   <meta content="" property="og:description">
 
 
-  <meta content="http://macbellingrath.com/2015/08/19/Guard-Statements-and-Throwing-Errors/" property="og:url">
+  <meta content="http://macbellingrath.com/page6/" property="og:url">
 
-
-  <meta content="2015-08-19T00:00:00-04:00" property="article:published_time">
-  <meta content="http://macbellingrath.com/about/" property="article:author">
 
 
 
   <title>
     
-      Guard Statements and Throwing Errors &middot; Mac Bellingrath
+      Mac Bellingrath &middot; Developer
     
   </title>
 
@@ -80,10 +77,18 @@
 
       <main>
           
-        <article class="post">
-  <h1 class="post-title">Guard Statements and Throwing Errors</h1>
-  <time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time>
-  <p>Today, I learned more about using the guard statement and how to throw and catch errors. In my playground, I have written a function to make some cookies. The function accepts one argument, an array of type string. By marking my function with the ‘throws’ keyword, I am telling the compiler that my function is capable of throwing errors. When calling this function, one will be required ( by the compiler ) to call within a ‘do’ block, and must “try” and “catch”, appropriately. 
+        <div class="posts">
+  
+  <article class="post">
+    <h1 class="post-title">
+      <a href="/2015/08/19/Guard-Statements-and-Throwing-Errors/">
+        Guard Statements and Throwing Errors
+      </a>
+    </h1>
+
+    <time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time>
+
+    <p>Today, I learned more about using the guard statement and how to throw and catch errors. In my playground, I have written a function to make some cookies. The function accepts one argument, an array of type string. By marking my function with the ‘throws’ keyword, I am telling the compiler that my function is capable of throwing errors. When calling this function, one will be required ( by the compiler ) to call within a ‘do’ block, and must “try” and “catch”, appropriately. 
 Guard is a lot like ‘if’ in swift, except that it is always followed by an ‘else’ clause. The guard statement is evaluated, and if false, executes the code inside the ‘else’ clause. You can have many guard statements after another, but after your code evaluates a guard statement to be false, it will execute the else clause and skip to the end of the function. 
 I begin by declaring a variable named ‘pantry,’ initialized with an array of the ingredients in my pantry. I then try my ‘makeCookies’ function, passing in the pantry array. You can see that the function is throwing cookieErrors.NotEnoughButter. Because the error was caught, the playground prints out “You’re gonna need some butter.”
 I’m excited to learn more about error handling, and how I can improve the readability and intent of my code.
@@ -91,44 +96,18 @@ I’m excited to learn more about error handling, and how I can improve the read
 —–</p>
 
 
-    
-</article>
+  </article>
+  
+</div>
 
-
-<aside class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/2015/09/09/Functional-Swift/">
-            Getting Started with Functional Swift
-            <small><time datetime="2015-09-09T00:00:00-04:00">09 Sep 2015</time></small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2015/08/28/Generic-Types/">
-            Generic Types
-            <small><time datetime="2015-08-28T00:00:00-04:00">28 Aug 2015</time></small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2015/08/24/Reference-Cycles/">
-            Reference Cycles
-            <small><time datetime="2015-08-24T00:00:00-04:00">24 Aug 2015</time></small>
-          </a>
-        </h3>
-      </li>
-    
-  </ul>
-</aside>
-
+<div class="pagination">
+  
+    <a class="pagination-item older" href="/page7">Older</a>
+  
+  
+    <a class="pagination-item newer" href="/page5">Newer</a>
+  
+</div>
 
           
       </main>

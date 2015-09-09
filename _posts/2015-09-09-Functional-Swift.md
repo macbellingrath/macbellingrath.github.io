@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting Started with Functional Swift
+description: Functional programming is something that I've put off while I learned Swift, fearing that it might overwhelm me with confusing or contradictory ideas. Here's why it's great.
 comments: True
 
 ---
