@@ -7,7 +7,7 @@ title: About
   Hi, my name is Mac.
 </p>
 
-I'm a software developer. I code in Swift and Objective-C, and am constantly learning new things. As I learn, I'll write about it here.'
+I'm a software developer. I code in Swift and Objective-C, and am constantly learning new things. As I learn, I'll write about it here.
 
 ## About Me 
 
