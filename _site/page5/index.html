@@ -81,20 +81,39 @@
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/2015/08/19/Swift--Error-Handling/">
-        Swift-er Error Handling
+      <a href="/2015/08/21/Type-Properties/">
+        Type Properties
       </a>
     </h1>
 
-    <time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time>
+    <time datetime="2015-08-21T00:00:00-04:00" class="post-date">21 Aug 2015</time>
 
-    <p>My initial impression of do/try/catch in Swift 2 was that it would only make my code longer and more complex. I was comfortable using optionals and simply checking/ unwrapping them with if/let syntax. Further reading has prompted me to realize that the new error-handling model is better for several reasons:</p>
+    <p>In addition to instance properties, structs, enums, and classes can also have type properties. The difference is that instance properties belong to an instance, and type properties belong to the type. For example, if we had a struct ‘Fruit’ and declared a stored instance property variable ‘name,’ every time that we created an instance of that struct, it would have its own unique value for that property.</p>
 
-<p>When you simply check that an optional is non-nil, you aren’t really handling the error. Throwing and catching errors forces you to deal with the errors rather than skip execution.
-Do/try/catch allows you to recover. If you catch the errors thrown by the method that you are calling in the do{} block, you’ll be able to recover and tell your user what’s going on.
-Writing your error enum (with ErrorType conformance) encourages you to think more intently about the possible error cases during development rather than when bugs start popping up.
-—–</p>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">Fruit</span> <span class="p">{</span>
+    
+    <span class="k">var</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="o">!</span>
+    
+<span class="p">}</span></code></pre></div>
 
+<p>So we could create an instance of Fruit and assign it the name of “banana”.</p>
+
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">banana</span> <span class="o">=</span> <span class="n">Fruit</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;banana&quot;</span><span class="p">)</span></code></pre></div>
+
+<p>So we have our banana, but what if we wanted to give our Fruit struct a property that applied to <em>all</em> fruit? This is where <strong>type</strong> properties come in. Type properties do not belong to each instance of the type, but to the type itself. This means that there is only one copy of a specific type property, regardless of how many instances of the type that we have. Let’s say that we want to declare a constant that would apply to all fruit, perhaps the recommended servings per day:</p>
+
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">Fruit</span> <span class="p">{</span>    
+    <span class="k">static</span> <span class="k">let</span> <span class="n">recommendedServingsPerDay</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="k">var</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="o">!</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Notice the use of the keyword <strong>Static</strong> at the beginning of the declaration. This indicates that this constant belongs to our Fruit type, not to individual instances of Fruit. If I were to type something like:</p>
+
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">print</span><span class="p">(</span><span class="n">banana</span><span class="p">.</span><span class="n">reommendedServingsPerDay</span><span class="p">)</span></code></pre></div>
+
+<p>The compiler will tell you that Fruit does not have a member named recommendedServingsPerDay, and this is true because recommendedServingsPerDay belongs to our <em>type</em>.</p>
+
+<p>Note that stored type properties must be given a default value, unlike stored instance properties.</p>
 
   </article>
   
@@ -113,7 +132,7 @@ Writing your error enum (with ErrorType conformance) encourages you to think mor
       </main>
       <footer class="footer">
         <small>
-          &copy; <time datetime="2015-09-09T11:08:50-04:00">2015</time>. All rights reserved.
+          &copy; <time datetime="2015-10-13T16:23:39-04:00">2015</time>. All rights reserved.
         </small>
       </footer>
     </div>

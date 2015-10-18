@@ -11,7 +11,7 @@
 
   <meta content="Mac Bellingrath" property="og:site_name">
 
-  <meta content="Using Class Functions in Swift Extensions" property="og:title">
+  <meta content="Home" property="og:title">
 
 
   <meta content="article" property="og:type">
@@ -20,17 +20,14 @@
   <meta content="" property="og:description">
 
 
-  <meta content="http://macbellingrath.com/2015/08/19/Class-Functions-and-Swift-Extensions/" property="og:url">
+  <meta content="http://macbellingrath.com/page9/" property="og:url">
 
-
-  <meta content="2015-08-19T00:00:00-04:00" property="article:published_time">
-  <meta content="http://macbellingrath.com/about/" property="article:author">
 
 
 
   <title>
     
-      Using Class Functions in Swift Extensions &middot; Mac Bellingrath
+      Mac Bellingrath &middot; Developer
     
   </title>
 
@@ -80,10 +77,18 @@
 
       <main>
           
-        <article class="post">
-  <h1 class="post-title">Using Class Functions in Swift Extensions</h1>
-  <time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time>
-  <p>During a recent experimentation with Swift’s extensions, I was reminded about the important distinctions between class and instance methods. I was writing a simple extension of UIColor to save me from retyping the rgb values and converting them to floats. My first attempt looked like this:</p>
+        <div class="posts">
+  
+  <article class="post">
+    <h1 class="post-title">
+      <a href="/2015/08/19/Class-Functions-and-Swift-Extensions/">
+        Using Class Functions in Swift Extensions
+      </a>
+    </h1>
+
+    <time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time>
+
+    <p>During a recent experimentation with Swift’s extensions, I was reminded about the important distinctions between class and instance methods. I was writing a simple extension of UIColor to save me from retyping the rgb values and converting them to floats. My first attempt looked like this:</p>
 
 <div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">extension</span> <span class="bp">UIColor</span><span class="p">{</span>
 <span class="k">func</span> <span class="n">lightRedColor</span><span class="p">()</span><span class="o">-&gt;</span> <span class="bp">UIColor</span> <span class="p">{</span>
@@ -112,74 +117,20 @@
 <h2 id="it-was-a-simple-error-but-it-served-as-a-good-reminder-to-me-to-pay-attention-to-when-i-should-be-marking-my-functions-with-the-class-keyword">It was a simple error, but it served as a good reminder to me to pay attention to when I should be marking my functions with the class keyword.</h2>
 
 
-    
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'macbellingrath';
-    
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </article>
+  
+</div>
 
-</article>
-
-
-<aside class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/2015/10/08/SFSafariViewController/">
-            SFSafariViewController and User Authentication
-            <small><time datetime="2015-10-08T00:00:00-04:00">08 Oct 2015</time></small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2015/09/09/Functional-Swift/">
-            Getting Started with Functional Swift
-            <small><time datetime="2015-09-09T00:00:00-04:00">09 Sep 2015</time></small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2015/08/28/Generic-Types/">
-            Generic Types
-            <small><time datetime="2015-08-28T00:00:00-04:00">28 Aug 2015</time></small>
-          </a>
-        </h3>
-      </li>
-    
-  </ul>
-</aside>
-
+<div class="pagination">
+  
+    <span class="pagination-item older">Older</span>
+  
+  
+    <a class="pagination-item newer" href="/page8">Newer</a>
+  
+</div>
 
           
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'macbellingrath';
-    
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
       </main>
       <footer class="footer">
         <small>

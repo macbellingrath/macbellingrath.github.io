@@ -11,26 +11,26 @@
 
   <meta content="Mac Bellingrath" property="og:site_name">
 
-  <meta content="Type Properties" property="og:title">
+  <meta content="SFSafariViewController and User Authentication" property="og:title">
 
 
   <meta content="article" property="og:type">
 
 
-  <meta content="In addition to instance properties, structs, enums, and classes can also have type properties. The difference is that instance properties belong to an instance, and type properties belong to the type." property="og:description">
+  <meta content="" property="og:description">
 
 
-  <meta content="http://macbellingrath.com/2015/08/21/Type-Properties/" property="og:url">
+  <meta content="http://macbellingrath.com/2015/10/08/SFSafariViewController/" property="og:url">
 
 
-  <meta content="2015-08-21T00:00:00-04:00" property="article:published_time">
+  <meta content="2015-10-08T00:00:00-04:00" property="article:published_time">
   <meta content="http://macbellingrath.com/about/" property="article:author">
 
 
 
   <title>
     
-      Type Properties &middot; Mac Bellingrath
+      SFSafariViewController and User Authentication &middot; Mac Bellingrath
     
   </title>
 
@@ -81,34 +81,21 @@
       <main>
           
         <article class="post">
-  <h1 class="post-title">Type Properties</h1>
-  <time datetime="2015-08-21T00:00:00-04:00" class="post-date">21 Aug 2015</time>
-  <p>In addition to instance properties, structs, enums, and classes can also have type properties. The difference is that instance properties belong to an instance, and type properties belong to the type. For example, if we had a struct ‘Fruit’ and declared a stored instance property variable ‘name,’ every time that we created an instance of that struct, it would have its own unique value for that property.</p>
+  <h1 class="post-title">SFSafariViewController and User Authentication</h1>
+  <time datetime="2015-10-08T00:00:00-04:00" class="post-date">08 Oct 2015</time>
+  <p>jkjhkjh</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">Fruit</span> <span class="p">{</span>
-    
-    <span class="k">var</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="o">!</span>
-    
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="nf">generate</span><span class="p">()</span> <span class="p">{</span>
+<span class="p">}</span>
+
+
+<span class="k">func</span> <span class="nf">joIsNotCool</span><span class="p">()</span> <span class="p">{</span>
 <span class="p">}</span></code></pre></div>
 
-<p>So we could create an instance of Fruit and assign it the name of “banana”.</p>
+<p>So im learning about this functionala laksjdlfkjsdf</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">banana</span> <span class="o">=</span> <span class="n">Fruit</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;banana&quot;</span><span class="p">)</span></code></pre></div>
+<p>I’m learning to code.</p>
 
-<p>So we have our banana, but what if we wanted to give our Fruit struct a property that applied to <em>all</em> fruit? This is where <strong>type</strong> properties come in. Type properties do not belong to each instance of the type, but to the type itself. This means that there is only one copy of a specific type property, regardless of how many instances of the type that we have. Let’s say that we want to declare a constant that would apply to all fruit, perhaps the recommended servings per day:</p>
-
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">Fruit</span> <span class="p">{</span>    
-    <span class="k">static</span> <span class="k">let</span> <span class="n">recommendedServingsPerDay</span> <span class="o">=</span> <span class="mi">9</span>
-    <span class="k">var</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="o">!</span>
-<span class="p">}</span></code></pre></div>
-
-<p>Notice the use of the keyword <strong>Static</strong> at the beginning of the declaration. This indicates that this constant belongs to our Fruit type, not to individual instances of Fruit. If I were to type something like:</p>
-
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">print</span><span class="p">(</span><span class="n">banana</span><span class="p">.</span><span class="n">reommendedServingsPerDay</span><span class="p">)</span></code></pre></div>
-
-<p>The compiler will tell you that Fruit does not have a member named recommendedServingsPerDay, and this is true because recommendedServingsPerDay belongs to our <em>type</em>.</p>
-
-<p>Note that stored type properties must be given a default value, unlike stored instance properties.</p>
 
     
 <div id="disqus_thread"></div>
@@ -134,15 +121,6 @@
     
       <li>
         <h3>
-          <a href="/2015/10/08/SFSafariViewController/">
-            SFSafariViewController and User Authentication
-            <small><time datetime="2015-10-08T00:00:00-04:00">08 Oct 2015</time></small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
           <a href="/2015/09/09/Functional-Swift/">
             Getting Started with Functional Swift
             <small><time datetime="2015-09-09T00:00:00-04:00">09 Sep 2015</time></small>
@@ -155,6 +133,15 @@
           <a href="/2015/08/28/Generic-Types/">
             Generic Types
             <small><time datetime="2015-08-28T00:00:00-04:00">28 Aug 2015</time></small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/08/24/Reference-Cycles/">
+            Reference Cycles
+            <small><time datetime="2015-08-24T00:00:00-04:00">24 Aug 2015</time></small>
           </a>
         </h3>
       </li>

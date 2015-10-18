@@ -81,94 +81,33 @@
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/2015/08/24/Reference-Cycles/">
-        Reference Cycles
+      <a href="/2015/08/28/Generic-Types/">
+        Generic Types
       </a>
     </h1>
 
-    <time datetime="2015-08-24T00:00:00-04:00" class="post-date">24 Aug 2015</time>
+    <time datetime="2015-08-28T00:00:00-04:00" class="post-date">28 Aug 2015</time>
 
-    <p>Swift is pretty great at managing memory automatically, it uses ARC to allocate memory when it’s needed, and free it up when it isn’t. I learned more about the <em>old way</em> of doing things, before automatic reference counting, and I’m here to tell you that ARC is your friend.</p>
+    <p>Swift is a fantastic programming language for many reasons. For beginners and experienced programmers alike, Swift offers a lot. As someone new to programming, Swift’s syntax is expressive and easy to understand. Experienced programmers will enjoy Swift’s modern language features and capabilities. Generics are interesting to me, and I’ve become more comfortable with them as I’ve learned more about Swift.</p>
 
-<h3 id="so-how-does-arc-work">So how does ARC work?</h3>
-<p>The simplest explanation is that ARC automatically allocates memory when you create an instance of a reference type. ARC then keeps track of the number of properties, vars, and lets where you are referencing that instance. This way, ARC will never accidentally deallocate an instance while it’s still being used. If it did, when we tried to access the instance, its properties, or its methods, our app would crash.</p>
+<h3 id="about-generics">About generics</h3>
+<p>Generics are self-describing. In Swift, generics allow you to write flexible code that avoids redundancy, but retains clarity. As an example, the swap method in the Swift standard library enables you to swap two instances, as long as they are of the same type. This is achieved through generics.</p>
 
-<h3 id="avoiding-strong-reference-cycles">Avoiding strong reference cycles</h3>
-<p>One of the more complicated matters in memory management is avoiding strong reference cycles between instances. 
-When you have two instances that have strong references to each-other, the reference count will never be zero, and ARC will never deallocate them. Here is an example:</p>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">var</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">class</span> <span class="n">Minion</span> <span class="p">{</span>
-  
-    <span class="k">let</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span>
-    
-    <span class="k">init</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nb">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-    <span class="p">}</span>
-    
-    <span class="k">var</span> <span class="nl">master</span><span class="p">:</span> <span class="n">Master</span><span class="o">?</span>
-    
-    <span class="k">deinit</span> <span class="p">{</span>
-        <span class="n">print</span><span class="p">(</span><span class="s">&quot;\(name) is being deinitialized&quot;</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="n">print</span><span class="p">(</span><span class="s">&quot;a is now \(a) and b is now \(b)&quot;</span><span class="p">)</span>
+<span class="c1">//prints &quot;a is now 2 and b is now 1&quot;</span></code></pre></div>
 
-<span class="k">class</span> <span class="n">Master</span> <span class="p">{</span>
-    
-    <span class="k">let</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span>
-    
-    <span class="k">var</span> <span class="nl">minion</span><span class="p">:</span> <span class="n">Minion</span><span class="o">?</span>
-    
-    <span class="k">init</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nb">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-    <span class="p">}</span>
-    <span class="k">deinit</span> <span class="p">{</span>
-        <span class="n">print</span><span class="p">(</span><span class="s">&quot;Master \(name) is being deinitialized&quot;</span><span class="p">)</span>
-    <span class="p">}</span>
+<p>Arrays and Dictionaries are, in fact, generic collections. They hold values of any specified type.</p>
 
-    
-<span class="p">}</span></code></pre></div>
+<h3 id="type-parameters">Type parameters</h3>
+<p>You specify a name for a generic parameter by putting the <em>placeholder</em> after the function name, in angle brackets.</p>
 
-<p>Above, I created two classes: Minion and Master. Minion instances will have a name property and an optional Master property. Next, let’s create some instances of each class. The two variables are of optional type so that we can later assign them nil values to test if ARC deallocates them.</p>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="n">swapTwoValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">inout</span> <span class="nl">a</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="k">inout</span> <span class="n">_</span> <span class="nl">b</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span></code></pre></div>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="nl">bob</span><span class="p">:</span> <span class="n">Minion</span><span class="o">?</span>
-<span class="n">bob</span> <span class="o">=</span> <span class="n">Minion</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Bob&quot;</span><span class="p">)</span>
-
-<span class="k">var</span> <span class="nl">scarlettOverKill</span> <span class="p">:</span> <span class="n">Master</span><span class="o">?</span>
-<span class="n">scarlettOverKill</span> <span class="o">=</span> <span class="n">Master</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Scarlett Overkill&quot;</span><span class="p">)</span></code></pre></div>
-
-<p>Since the Master property is an optional, its default is nil, and likewise for the optional Minion property in Master. Now that we have our instances, we can link them together…</p>
-
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">bob</span><span class="o">!</span><span class="p">.</span><span class="n">master</span> <span class="o">=</span> <span class="n">scarlettOverKill</span>
-<span class="n">scarlettOverKill</span><span class="o">!</span><span class="p">.</span><span class="n">minion</span> <span class="o">=</span> <span class="n">bob</span></code></pre></div>
-
-<p>The problem is that now, even if we do the following:</p>
-
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">bob</span> <span class="o">=</span> <span class="nb">nil</span>
-<span class="n">scarlettOverkill</span>  <span class="o">=</span> <span class="nb">nil</span></code></pre></div>
-
-<p>Our deinit messages will never print because both instances still have strong references to each other.</p>
-
-<h3 id="how-do-we-fix-memory-cycles">How do we fix memory cycles?</h3>
-<p>Swift addresses the issue above by letting us tell ARC that an instance can refer to another instance without keeping its strong reference. Swift uses the two keywords, “weak” and “unowned.”</p>
-
-<p>We use <em>weak</em> when it’s possible for the reference to become nil at some point. In our example, a minion’s master could become nil at some point.</p>
-
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">class</span> <span class="n">Minion</span> <span class="p">{</span>
-<span class="p">...</span>
-<span class="k">weak</span> <span class="k">var</span> <span class="nl">master</span><span class="p">:</span> <span class="n">Master</span><span class="o">?</span>
-
-<span class="p">}</span></code></pre></div>
-
-<p>We use <em>unowned</em> when we know that the reference will always have a value. Because of this, when we use ‘unowned’ our reference can only be of a non-optional type. For argument’s sake, let’s say that minions will <strong>always have a master.</strong> With this assumption, we could write the following (changing from our example above):</p>
-
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">class</span> <span class="n">Minion</span> <span class="p">{</span>
-<span class="p">...</span>
-<span class="kr">unowned</span> <span class="k">let</span> <span class="nl">master</span><span class="p">:</span> <span class="n">Master</span>
-
-<span class="p">}</span></code></pre></div>
-
-<p>In either case, if we were to set bob or scarlettOverkill to nil, our deinitialization message will now print out because ARC has deallocated them.</p>
-
+<p>In the method body, you can use the generic type parameter in the place where you might normally use a local variable name.</p>
 
   </article>
   
@@ -187,7 +126,7 @@ When you have two instances that have strong references to each-other, the refer
       </main>
       <footer class="footer">
         <small>
-          &copy; <time datetime="2015-09-09T11:08:50-04:00">2015</time>. All rights reserved.
+          &copy; <time datetime="2015-10-13T16:23:39-04:00">2015</time>. All rights reserved.
         </small>
       </footer>
     </div>

@@ -81,40 +81,16 @@
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/2015/08/19/Class-Functions-and-Swift-Extensions/">
-        Using Class Functions in Swift Extensions
+      <a href="/2015/08/19/Getters-and-Setters/">
+        Getters and Setters
       </a>
     </h1>
 
     <time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time>
 
-    <p>During a recent experimentation with Swift’s extensions, I was reminded about the important distinctions between class and instance methods. I was writing a simple extension of UIColor to save me from retyping the rgb values and converting them to floats. My first attempt looked like this:</p>
-
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">extension</span> <span class="bp">UIColor</span><span class="p">{</span>
-<span class="k">func</span> <span class="n">lightRedColor</span><span class="p">()</span><span class="o">-&gt;</span> <span class="bp">UIColor</span> <span class="p">{</span>
-<span class="k">return</span> <span class="bp">UIColor</span><span class="p">(</span><span class="nl">red</span><span class="p">:</span> <span class="mi">144</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">green</span><span class="p">:</span> <span class="mi">80</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">blue</span><span class="p">:</span> <span class="mi">89</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">alpha</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="p">}</span></code></pre></div>
-
-<p>When I went to declare my color variable, Xcode wouldn’t let me call my new function on UIColor. Instead, I would have had to create an instance using a predefined public class method declared in UIColor and then call my function on that instance.</p>
-
-<p>It might look like this garbage:</p>
-
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">myColor</span> <span class="o">=</span> <span class="bp">UIColor</span><span class="p">.</span><span class="n">lightGrayColor</span><span class="p">().</span><span class="n">lightRedColor</span><span class="p">()</span></code></pre></div>
-
-<p>When I looked at the declaration for .lightGrayColor(), I realized that it must be declared as a class function, not as an instance method.</p>
-
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">extension</span> <span class="bp">UIColor</span><span class="p">{</span>
-<span class="k">class</span> <span class="k">func</span> <span class="n">lightRedColor</span><span class="p">()</span><span class="o">-&gt;</span> <span class="bp">UIColor</span> <span class="p">{</span>
-<span class="k">return</span> <span class="bp">UIColor</span><span class="p">(</span><span class="nl">red</span><span class="p">:</span> <span class="mi">144</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">green</span><span class="p">:</span> <span class="mi">80</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">blue</span><span class="p">:</span> <span class="mi">89</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">alpha</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="p">}</span></code></pre></div>
-
-<p>And now, I can call my function on UIColor.</p>
-
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">myColor</span> <span class="o">=</span> <span class="bp">UIColor</span><span class="p">.</span><span class="n">lightRedColor</span><span class="p">()</span></code></pre></div>
-
-<h2 id="it-was-a-simple-error-but-it-served-as-a-good-reminder-to-me-to-pay-attention-to-when-i-should-be-marking-my-functions-with-the-class-keyword">It was a simple error, but it served as a good reminder to me to pay attention to when I should be marking my functions with the class keyword.</h2>
+    <p>Properties can have getters and setters that offer a lot of convenience, especially in cases where you are doing a lot of calculation. After the declaration, all you have to do is write get and set, each followed by a set of curly braces. With these types of computed properties, we can determine the value of a variable by calculation. The setter allows us to set the values of other related variables when a new value is assigned to the computed property.
+<img src="https://raw.githubusercontent.com/macbellingrath/macbellingrath.github.io/master/Assets/getset.png" alt="Playground" />
+—–</p>
 
 
   </article>
@@ -123,7 +99,7 @@
 
 <div class="pagination">
   
-    <span class="pagination-item older">Older</span>
+    <a class="pagination-item older" href="/page9">Older</a>
   
   
     <a class="pagination-item newer" href="/page7">Newer</a>
@@ -134,7 +110,7 @@
       </main>
       <footer class="footer">
         <small>
-          &copy; <time datetime="2015-09-09T11:08:50-04:00">2015</time>. All rights reserved.
+          &copy; <time datetime="2015-10-13T16:23:39-04:00">2015</time>. All rights reserved.
         </small>
       </footer>
     </div>
