@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" id="ppstyle" type="text/css" href="style.css">
+    <link rel='stylesheet' href='./css/animate.css' /><link rel='stylesheet' href='./css/font-awesome.min.css'/><link rel='stylesheet' href='./css/ionicons.min.css'/><link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="./js/jquery-2.1.0.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/blocs.js"></script>
+    
+    <title></title>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Mac Bellingrath | iOS Developer</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Type Properties</h1>
+    <p class="post-meta"><time datetime="2015-08-21T00:00:00-04:00" itemprop="datePublished">Aug 21, 2015</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In addition to instance properties, structs, enums, and classes can also have type properties. The difference is that instance properties belong to an instance, and type properties belong to the type. For example, if we had a struct ‘Fruit’ and declared a stored instance property variable ‘name,’ every time that we created an instance of that struct, it would have its own unique value for that property.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">Fruit</span> <span class="p">{</span>
+    
+    <span class="k">var</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="o">!</span>
+    
+<span class="p">}</span></code></pre></figure>
+
+<p>So we could create an instance of Fruit and assign it the name of “banana”.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">banana</span> <span class="o">=</span> <span class="n">Fruit</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;banana&quot;</span><span class="p">)</span></code></pre></figure>
+
+<p>So we have our banana, but what if we wanted to give our Fruit struct a property that applied to <em>all</em> fruit? This is where <strong>type</strong> properties come in. Type properties do not belong to each instance of the type, but to the type itself. This means that there is only one copy of a specific type property, regardless of how many instances of the type that we have. Let’s say that we want to declare a constant that would apply to all fruit, perhaps the recommended servings per day:</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">Fruit</span> <span class="p">{</span>    
+    <span class="k">static</span> <span class="k">let</span> <span class="n">recommendedServingsPerDay</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="k">var</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="o">!</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Notice the use of the keyword <strong>Static</strong> at the beginning of the declaration. This indicates that this constant belongs to our Fruit type, not to individual instances of Fruit. If I were to type something like:</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">print</span><span class="p">(</span><span class="n">banana</span><span class="p">.</span><span class="n">reommendedServingsPerDay</span><span class="p">)</span></code></pre></figure>
+
+<p>The compiler will tell you that Fruit does not have a member named recommendedServingsPerDay, and this is true because recommendedServingsPerDay belongs to our <em>type</em>.</p>
+
+<p>Note that stored type properties must be given a default value, unlike stored instance properties.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    
+<div class="bloc l-bloc bgc-white" id="bloc-5">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-3">
+				<h3 class="mg-md">
+					About
+				</h3><a href="index.html" class="a-btn a-block">The team</a><a href="index.html" class="a-btn a-block">Contact us</a>
+			</div>
+			<div class="col-sm-3">
+				<h3 class="mg-md">
+					Get the App
+				</h3><a href="index.html" class="a-btn a-block">iPhone</a><a href="index.html" class="a-btn a-block">Android</a>
+			</div>
+			<div class="col-sm-3">
+				<h3 class="mg-md">
+					Follow us
+				</h3><a href="index.html" class="a-btn a-block">Twitter</a><a href="index.html" class="a-btn a-block">Facebook</a>
+			</div>
+			<div class="col-sm-3">
+				<h3 class="mg-md">
+					Contact
+				</h3><a href="index.html" class="a-btn a-block">Privacy</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+  </body>
+
+</html>

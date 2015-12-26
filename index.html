@@ -1,33 +1,245 @@
----
-layout: default
-title: Home
----
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" id="ppstyle" type="text/css" href="./css/style.css">
+    <link rel='stylesheet' href='./css/animate.css' /><link rel='stylesheet' href='./css/font-awesome.min.css'/><link rel='stylesheet' href='./css/ionicons.min.css'/><link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="./js/jquery-2.1.0.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/blocs.js"></script>
+    
+    <title></title>
+</head>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <article class="post">
-    <h1 class="post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<body>
+<!-- Main container -->
+<div class="page-container">
+    
+<!-- Hero Bloc -->
+<div id="hero-bloc" class="bloc hero l-bloc bgc-white">
+	<div class="video-bg-contianer">
+		<video class="bloc-video" preload="auto" loop="loop" autoplay="autoplay">
+			<source src="vid/REVERSED.mp4" type="video/mp4" />
+		</video>
+	</div>
+	<div class="container bloc-sm hero-nav sticky-nav">
+		<nav class="navbar row">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html"><img src="img/logomb.png" width="50" alt="icon" /></a>
+				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse navbar-1">
+				<ul class="site-navigation nav navbar-nav pull-right">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="blog.html" id="pl-undefined">Blog</a>
+					</li>
+                    <li>
+						<a href="cv.html">CV</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="v-center">
+		<div class="vc-content row">
+			<div class="col-sm-12">
+				<h1 class=" text-center">
+					Mac Bellingrath
+				</h1>
+				<h3 class=" text-center mg-lg">
+					iOS Developer
+				</h3>
 
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
-
-    {{ post.content }}
-  </article>
-  {% endfor %}
+			</div>
+		</div><a id="scroll-hero" class="btn-dwn" href="#"><span class="fa fa-chevron-down"></span></a>
+	</div>
 </div>
+<!-- Hero Bloc END -->
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
+<!-- ScrollToTop Button -->
+<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span class="fa fa-chevron-up"></span></a>
+<!-- ScrollToTop Button END-->
+
+
+<!-- Footer - bloc-2 -->
+<div class="bloc l-bloc bgc-white" id="bloc-2">
+	<div class="container bloc-lg">
+		<div class="col-xs-12 col-md-8 col-md-offset-2">
+			<h3 class="text-center ">
+				<i>"</i>You&rsquo;ve Learned More Than You Think<i>."</i>
+			</h3>
+			<p class="text-center">
+				<strong>Natasha The Robot</strong>
+			</p>
+		</div>
+	</div>
 </div>
+<!-- Footer - bloc-2 END -->
+
+<!-- Footer - bloc-3 -->
+<div class="bloc l-bloc bgc-white" id="bloc-3">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="text-center mg-md">
+					How can I help?
+				</h2>
+			</div>
+		</div>
+		<div class="row voffset-md">
+			<div class="col-sm-4">
+				<img src="img/swiftgon-01.png" class="img-responsive center-block" width="100" />
+				<h3 class="text-center mg-md">
+					Swift
+				</h3>
+				<p class="text-center">
+					Apple&rsquo;s newest, most powerful language.
+				</p>
+			</div>
+			<div class="col-sm-4">
+				<div class="text-center">
+					<span class="fa fa-file-code-o icon-round icon-md"></span>
+				</div>
+				<h3 class="text-center mg-md">
+					Objective-C
+				</h3>
+				<p class="text-center">
+					A superset of the C programming language that provides object-oriented capabilities and a dynamic runtime.
+				</p>
+			</div>
+			<div class="col-sm-4">
+				<div class="text-center">
+					<span class="fa fa-apple icon-round icon-md"></span>
+				</div>
+				<h3 class="text-center mg-md">
+					UIKit
+				</h3>
+				<p class="text-center">
+					The infrastructure for building and managing iOS apps.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Footer - bloc-3 END -->
+
+<!-- Footer - bloc-4 -->
+<div class="bloc l-bloc bgc-white" id="bloc-4">
+	<div class="container bloc-md">
+		<div class="row">
+			<div class="col-sm-4">
+				<img src="img/wanderful.jpg" class="center-block mg-md" height="150" />
+				<h3 class="mg-md">
+					Wanderful
+				</h3>
+				<p>
+					The best way to create, share and explore with a community.<br /><strong>Build Summary:</strong><br /><a href="https://www.github.com/mapthefuture/ios">Github</a>
+				</p>
+			</div>
+			<div class="col-sm-4">
+				<img src="img/HAWK.png" class="center-block mg-md" height="150" />
+				<h3 class="mg-md">
+					OfficeHawk
+				</h3>
+				<p>
+					Lorem ipsum dolor sit amet, adipiscing elit Aenean commodo ligula eget.
+				</p>
+			</div>
+			<div class="col-sm-4">
+				<img src="img/Icon-76@2x.png" class="center-block mg-md" height="150" />
+				<h3 class="mg-md">
+					Cardyo
+				</h3>
+				<p>
+					Lorem ipsum dolor sit amet, adipiscing elit Aenean commodo ligula eget.
+				</p>
+			</div>
+		</div>
+		<div class="row voffset">
+			<div class="col-sm-4">
+				<a href="https://github.com/macbellingrath/Playgrounds"><img src="img/swift.png" class="mg-md center-block" height="150" /></a>
+				<h3 class="mg-md">
+					Swift Playgrounds
+				</h3>
+				<p>
+					Explorations into the Swift Programming Language in the native REPL.
+				</p>
+			</div>
+			<div class="col-sm-4">
+				<img src="img/camera.png" class="mg-md center-block" height="150" />
+				<h3 class="mg-md">
+					Camera/Selfie
+				</h3>
+				<p>
+					An Instagram-style app written in Objective-C, and converted to Swift.
+				</p>
+			</div>
+			<div class="col-sm-4">
+				<img src="img/Icon-60@3x.png" class="center-block mg-md" height="150" />
+				<h3 class="mg-md">
+					CoreNotes
+				</h3>
+				<p>
+					A category-based note-taking app utilizing Core Data.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Footer - bloc-4 END -->
+
+<!-- Footer - bloc-5 -->
+<div class="bloc l-bloc bgc-white" id="bloc-5">
+	<div class="container bloc-lg">
+		<div class="row">
+			
+		</div>
+	</div>
+</div>
+<!-- Footer - bloc-5 END -->
+
+<!-- Footer - bloc-6 -->
+<div class="bloc l-bloc bgc-white" id="bloc-6">
+	<div class="container bloc-sm">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 col-sm-12">
+				<div class="col-sm-3 text-center">
+					<a class="social" href="twitter.com/mbellingrath"><span class="fa fa-twitter icon-md"></span></a>
+				</div>
+				<div class="col-sm-3 text-center">
+					<a class="social" href="http://github.com/macbellingrath"><span class="fa fa-github-alt icon-md"></span></a>
+				</div>
+				<div class="col-sm-3 text-center">
+					<a class="social" href="https://www.linkedin.com/in/mbellingrath"><span class="ion ion-social-linkedin icon-md"></span></a>
+				</div>
+				<div class="col-sm-3 text-center">
+					<a href="mailto: hello@macbellingrath.com?Subject=Hello%20Mac" target="_blank"></a>
+					<div class="text-center">
+						<span class="ion ion-android-mail icon icon-mail icon-md"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Footer - bloc-6 END -->
+</div>
+<!-- Main container END -->
+
+</body>
+    
+<!-- Google Analytics -->
+
+<!-- Google Analytics END -->
+
+</html>

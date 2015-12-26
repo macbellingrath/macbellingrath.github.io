@@ -41,7 +41,7 @@ let myColor = UIColor.lightRedColor()
 {% endhighlight %}
 
 It was a simple error, but it served as a good reminder to me to pay attention to when I should be marking my functions with the class keyword.
------
+
 
 
 
