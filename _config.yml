@@ -1,34 +1,24 @@
-# Permalinks
+# Welcome to Jekyll!
 #
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Setup
-title:               Mac Bellingrath
-tagline:             Developer
-url:                 http://macbellingrath.com
-paginate:            1
-baseurl:             ""
+# Site settings
+title: Mac Bellingrath | iOS Developer
+email: hello@macbellingrath.com
+description: > 
+Mac Bellingrath | iOS Developer:
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://macbellingrath.com" # the base hostname & protocol for your site
+twitter_username: mbellingrath
+github_username:  macbellingrath
+highlighter: pygments
 
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
 
-pages_list:       
-  About: '/about'
-  Archive: '/archive'
-  Feed: '/atom.xml'
-  
-# About/contact
-author:
-  name:              Mac Bellingrath    
-  url:               https://twitter.com/mbellingrath
-  email:             macbellingrath@gmail.com
-# Custom vars
-version:             2.0.0
-github:
-  repo:              https://github.com/poole/poole
+
+# Build settings
+markdown: kramdown
+#Gems
+gems: [jekyll-paginate]

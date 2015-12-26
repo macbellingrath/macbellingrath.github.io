@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" id="ppstyle" type="text/css" href="style.css">
+    <link rel='stylesheet' href='./css/animate.css' /><link rel='stylesheet' href='./css/font-awesome.min.css'/><link rel='stylesheet' href='./css/ionicons.min.css'/><link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="./js/jquery-2.1.0.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/blocs.js"></script>
+    
+    <title></title>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Mac Bellingrath | iOS Developer</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Getting Started with Functional Swift</h1>
+    <p class="post-meta"><time datetime="2015-09-09T00:00:00-04:00" itemprop="datePublished">Sep 9, 2015</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Functional programming is something that I’ve put off while I learned Swift, fearing that it might overwhelm me with confusing or contradictory ideas. As I read more about functional programming in Swift, however, I find that my understanding of the language improves as a whole. If you’re interested in learning more about functional programming in Swift, start by demystifying the basics. You may remember that functions are types in the Swift language. They can be passed as arguments to other functions, just like Ints, Bools, Strings or Doubles. This language feature enables a programmer to decompose complex and specific functions into smaller pieces that can be reused. Functional programs are beginning to make a lot of sense to me as I think about the importances of readability and flexibility in my own code.</p>
+
+<p>Here are some code snippets from my playground experiments with functional programming in Swift.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="c1">//: Functional Swift</span>
+
+<span class="k">import</span> <span class="n">UIKit</span>
+
+
+<span class="k">typealias</span> <span class="n">computation</span> <span class="o">=</span> <span class="n">Int</span> <span class="o">-&gt;</span> <span class="n">Int</span>
+
+<span class="c1">//add two ints together</span>
+
+<span class="k">func</span> <span class="n">addTwoInts</span><span class="p">(</span><span class="nl">x</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="nl">y</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="p">}</span>
+
+
+<span class="c1">//Add two ints curried function</span>
+
+<span class="k">func</span> <span class="n">add2</span><span class="p">(</span><span class="nl">x</span><span class="p">:</span><span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="n">y</span> <span class="k">in</span> <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="n">add2</span><span class="p">(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">func</span> <span class="n">add3</span><span class="p">(</span><span class="nl">x</span><span class="p">:</span><span class="n">Int</span><span class="p">)(</span><span class="n">_</span> <span class="nl">y</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+    
+<span class="p">}</span>
+
+<span class="n">add3</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="c1">// Define a custom operator</span>
+<span class="kr">infix</span> <span class="kr">operator</span> <span class="o">&gt;&gt;&gt;</span> <span class="p">{</span> <span class="kr">associativity</span> <span class="kr">left</span> <span class="p">}</span>
+
+<span class="k">func</span> <span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="nl">x</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="nl">y</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>
+    
+<span class="p">}</span>
+
+<span class="mi">8</span> <span class="o">&gt;&gt;&gt;</span> <span class="mi">8</span>
+
+<span class="c1">//: Chapter 4 - Map, Filter, Reduce</span>
+
+<span class="c1">//write a function that increments every member of an array</span>
+
+<span class="k">func</span> <span class="n">incrementArray</span><span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Int</span><span class="p">]</span> <span class="p">{</span>
+   
+    <span class="k">var</span> <span class="nl">result</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">xs</span> <span class="p">{</span>
+        <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result</span>
+    
+<span class="p">}</span>
+
+<span class="c1">// write a function that doubles an array</span>
+
+
+<span class="k">func</span> <span class="n">doubleArray</span><span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Int</span><span class="p">]</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nl">result</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">xs</span> <span class="p">{</span>
+        <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="k">return</span> <span class="n">result</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="n">computeArray</span><span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">],</span> <span class="nl">f</span><span class="p">:</span> <span class="n">computation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Int</span><span class="p">]</span> <span class="p">{</span>
+    
+    <span class="k">var</span> <span class="nl">result</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">xs</span> <span class="p">{</span>
+       <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="n">squared</span><span class="p">(</span><span class="nl">x</span><span class="p">:</span><span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+<span class="p">}</span>
+
+<span class="k">var</span> <span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="n">computeArray</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span> <span class="err">$</span><span class="mi">0</span> <span class="o">*</span> <span class="err">$</span><span class="mi">0</span> <span class="p">}</span>
+
+<span class="c1">// Write generic compute function</span>
+
+<span class="k">func</span> <span class="n">genericComputeArray</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">],</span> <span class="nl">f</span><span class="p">:</span> <span class="n">Int</span><span class="o">-&gt;</span> <span class="n">T</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="p">{</span>
+    
+    <span class="k">var</span> <span class="nl">result</span><span class="p">:</span> <span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">xs</span> <span class="p">{</span>
+        <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="p">}</span>
+    
+    <span class="k">return</span> <span class="n">result</span>
+<span class="p">}</span>
+
+<span class="n">genericComputeArray</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">x</span> <span class="k">in</span> <span class="k">return</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">3</span>
+<span class="p">}</span>
+
+<span class="c1">// Write generic function that works with array of any type</span>
+
+<span class="k">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">U</span><span class="o">&gt;</span><span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="nl">f</span><span class="p">:</span> <span class="n">T</span> <span class="o">-&gt;</span> <span class="n">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">U</span><span class="p">]</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nl">result</span><span class="p">:</span> <span class="p">[</span><span class="n">U</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">xs</span> <span class="p">{</span>
+        <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result</span>
+<span class="p">}</span>
+
+<span class="c1">// Swift Standard Library  already has map</span>
+
+<span class="k">func</span> <span class="n">doubleArray2</span><span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Int</span><span class="p">]</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">xs</span><span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">x</span> <span class="k">in</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="c1">// Filter</span>
+
+<span class="k">func</span> <span class="n">filter</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="nl">check</span><span class="p">:</span> <span class="n">T</span> <span class="o">-&gt;</span> <span class="n">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="p">{</span>
+    
+    <span class="k">var</span> <span class="nl">result</span><span class="p">:</span> <span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">xs</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">check</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Will&quot;</span><span class="p">,</span> <span class="s">&quot;Mac&quot;</span><span class="p">,</span> <span class="s">&quot;Jay&quot;</span><span class="p">]</span>
+
+<span class="k">let</span> <span class="n">namesWithLetterA</span> <span class="o">=</span> <span class="n">names</span><span class="p">.</span><span class="n">filter</span> <span class="p">{</span> <span class="n">name</span> <span class="k">in</span> <span class="n">name</span><span class="p">.</span><span class="n">containsString</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">)}</span>
+
+
+<span class="n">namesWithLetterA</span>
+
+
+<span class="c1">//Reduce</span>
+
+<span class="k">let</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="k">func</span> <span class="n">reduce</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span> <span class="n">R</span><span class="o">&gt;</span><span class="p">(</span><span class="nl">arr</span><span class="p">:</span> <span class="p">[</span><span class="n">A</span><span class="p">],</span> <span class="nl">initialValue</span><span class="p">:</span> <span class="n">R</span><span class="p">,</span> <span class="nl">combine</span><span class="p">:</span> <span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">R</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">R</span> <span class="p">{</span>
+   
+    <span class="k">var</span> <span class="n">result</span> <span class="o">=</span> <span class="n">initialValue</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">arr</span> <span class="p">{</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">combine</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result</span>
+<span class="p">}</span>
+<span class="k">func</span> <span class="n">sumUsingReduce</span><span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">reduce</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="nl">initialValue</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">result</span><span class="p">,</span> <span class="n">x</span> <span class="k">in</span> <span class="n">result</span> <span class="o">+</span> <span class="n">x</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">sumUsingReduce</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+<span class="c1">// SSL has reduce function</span>
+
+
+<span class="k">struct</span> <span class="n">City</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span>
+    <span class="k">let</span> <span class="nl">population</span><span class="p">:</span> <span class="n">Int</span>
+<span class="p">}</span>
+
+<span class="c1">//cities with pop in thousands</span>
+
+<span class="k">let</span> <span class="n">paris</span> <span class="o">=</span> <span class="n">City</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Paris&quot;</span><span class="p">,</span> <span class="nl">population</span><span class="p">:</span> <span class="mi">2243</span><span class="p">)</span>
+<span class="k">let</span> <span class="n">madrid</span> <span class="o">=</span> <span class="n">City</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Madrid&quot;</span><span class="p">,</span> <span class="nl">population</span><span class="p">:</span> <span class="mi">3216</span><span class="p">)</span>
+<span class="k">let</span> <span class="n">amsterdam</span> <span class="o">=</span> <span class="n">City</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Amsterdam&quot;</span><span class="p">,</span> <span class="nl">population</span><span class="p">:</span> <span class="mi">811</span><span class="p">)</span>
+<span class="k">let</span> <span class="n">berlin</span> <span class="o">=</span> <span class="n">City</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Berlin&quot;</span><span class="p">,</span> <span class="nl">population</span><span class="p">:</span> <span class="mi">3397</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="n">paris</span><span class="p">,</span> <span class="n">madrid</span><span class="p">,</span> <span class="n">amsterdam</span><span class="p">,</span> <span class="n">berlin</span><span class="p">]</span>
+
+<span class="c1">//scale population up</span>
+<span class="k">func</span> <span class="n">scale</span><span class="p">(</span><span class="nl">city</span><span class="p">:</span> <span class="n">City</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">City</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">City</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="n">city</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="nl">population</span><span class="p">:</span> <span class="n">city</span><span class="p">.</span><span class="n">population</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="p">}</span>
+
+
+<span class="n">cities</span><span class="p">.</span><span class="n">filter</span><span class="p">{</span> <span class="n">city</span> <span class="k">in</span> <span class="n">city</span><span class="p">.</span><span class="n">population</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="p">}</span>
+    <span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">reduce</span><span class="p">(</span><span class="s">&quot;City: Population&quot;</span><span class="p">){</span> <span class="n">result</span><span class="p">,</span> <span class="n">c</span> <span class="k">in</span>
+        <span class="k">return</span> <span class="n">result</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">+</span> <span class="s">&quot;\(c.name) : \(c.population)&quot;</span>
+        
+<span class="p">}</span></code></pre></figure>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    
+<div class="bloc l-bloc bgc-white" id="bloc-5">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-3">
+				<h3 class="mg-md">
+					About
+				</h3><a href="index.html" class="a-btn a-block">The team</a><a href="index.html" class="a-btn a-block">Contact us</a>
+			</div>
+			<div class="col-sm-3">
+				<h3 class="mg-md">
+					Get the App
+				</h3><a href="index.html" class="a-btn a-block">iPhone</a><a href="index.html" class="a-btn a-block">Android</a>
+			</div>
+			<div class="col-sm-3">
+				<h3 class="mg-md">
+					Follow us
+				</h3><a href="index.html" class="a-btn a-block">Twitter</a><a href="index.html" class="a-btn a-block">Facebook</a>
+			</div>
+			<div class="col-sm-3">
+				<h3 class="mg-md">
+					Contact
+				</h3><a href="index.html" class="a-btn a-block">Privacy</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+  </body>
+
+</html>
