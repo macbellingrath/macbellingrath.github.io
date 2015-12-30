@@ -49,13 +49,6 @@ Voted &quot;most ready for the market&quot; by CodeSmyth during weekend hackatho
 **BBA Business**, Belmont University, *2010 - 2014*
 
 
-magna cum laude
-
----
-
-**BBA Business**, Belmont University, *2010 - 2014*
-
-
 School of Business-Marketing &quot;Student of The Year&quot; 2014, magna cum laude
 
 ---
