@@ -2,7 +2,6 @@
 {% assign base = '' %}
 {% assign depth = page.url | split: '/' | size | minus: 1 %}
 {% if    page.title == 'Blog' %}{% assign base = '..' %}
-{$ elsif page.path contains '_posts' %}{% assign base = '../..' %}
 {% elsif    depth == 1 %}{% assign base = '.' %}
 {% elsif depth == 2 %}{% assign base = '..' %}
 {% elsif depth == 3 %}{% assign base = '../..' %}
