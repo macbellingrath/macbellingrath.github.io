@@ -5,8 +5,8 @@
     <description></description>
     <link>http://macbellingrath.com/</link>
     <atom:link href="http://macbellingrath.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Dec 2015 16:56:47 -0500</pubDate>
-    <lastBuildDate>Sat, 26 Dec 2015 16:56:47 -0500</lastBuildDate>
+    <pubDate>Wed, 30 Dec 2015 10:15:25 -0500</pubDate>
+    <lastBuildDate>Wed, 30 Dec 2015 10:15:25 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -17,9 +17,11 @@ In Joe Burgess’s (of the Flatiron School)  talk during &lt;a href=&quot;https:
 
 </description>
         <pubDate>Sun, 18 Oct 2015 00:00:00 -0400</pubDate>
-        <link>http://macbellingrath.com/2015/10/18/Haskell-and-Swift.html</link>
-        <guid isPermaLink="true">http://macbellingrath.com/2015/10/18/Haskell-and-Swift.html</guid>
+        <link>http://macbellingrath.com/blog/2015/10/18/Haskell-and-Swift.html</link>
+        <guid isPermaLink="true">http://macbellingrath.com/blog/2015/10/18/Haskell-and-Swift.html</guid>
         
+        
+        <category>blog</category>
         
       </item>
     
@@ -224,9 +226,11 @@ In Joe Burgess’s (of the Flatiron School)  talk during &lt;a href=&quot;https:
 
 </description>
         <pubDate>Wed, 09 Sep 2015 00:00:00 -0400</pubDate>
-        <link>http://macbellingrath.com/2015/09/09/Functional-Swift.html</link>
-        <guid isPermaLink="true">http://macbellingrath.com/2015/09/09/Functional-Swift.html</guid>
+        <link>http://macbellingrath.com/blog/2015/09/09/Functional-Swift.html</link>
+        <guid isPermaLink="true">http://macbellingrath.com/blog/2015/09/09/Functional-Swift.html</guid>
         
+        
+        <category>blog</category>
         
       </item>
     
@@ -254,9 +258,11 @@ In Joe Burgess’s (of the Flatiron School)  talk during &lt;a href=&quot;https:
 &lt;p&gt;In the method body, you can use the generic type parameter in the place where you might normally use a local variable name.&lt;/p&gt;
 </description>
         <pubDate>Fri, 28 Aug 2015 00:00:00 -0400</pubDate>
-        <link>http://macbellingrath.com/2015/08/28/Generic-Types.html</link>
-        <guid isPermaLink="true">http://macbellingrath.com/2015/08/28/Generic-Types.html</guid>
+        <link>http://macbellingrath.com/blog/2015/08/28/Generic-Types.html</link>
+        <guid isPermaLink="true">http://macbellingrath.com/blog/2015/08/28/Generic-Types.html</guid>
         
+        
+        <category>blog</category>
         
       </item>
     
@@ -345,9 +351,11 @@ When you have two instances that have strong references to each-other, the refer
 
 </description>
         <pubDate>Mon, 24 Aug 2015 00:00:00 -0400</pubDate>
-        <link>http://macbellingrath.com/2015/08/24/Reference-Cycles.html</link>
-        <guid isPermaLink="true">http://macbellingrath.com/2015/08/24/Reference-Cycles.html</guid>
+        <link>http://macbellingrath.com/blog/2015/08/24/Reference-Cycles.html</link>
+        <guid isPermaLink="true">http://macbellingrath.com/blog/2015/08/24/Reference-Cycles.html</guid>
         
+        
+        <category>blog</category>
         
       </item>
     
@@ -381,9 +389,11 @@ When you have two instances that have strong references to each-other, the refer
 &lt;p&gt;Note that stored type properties must be given a default value, unlike stored instance properties.&lt;/p&gt;
 </description>
         <pubDate>Fri, 21 Aug 2015 00:00:00 -0400</pubDate>
-        <link>http://macbellingrath.com/2015/08/21/Type-Properties.html</link>
-        <guid isPermaLink="true">http://macbellingrath.com/2015/08/21/Type-Properties.html</guid>
+        <link>http://macbellingrath.com/blog/2015/08/21/Type-Properties.html</link>
+        <guid isPermaLink="true">http://macbellingrath.com/blog/2015/08/21/Type-Properties.html</guid>
         
+        
+        <category>blog</category>
         
       </item>
     
@@ -398,9 +408,11 @@ Writing your error enum (with ErrorType conformance) encourages you to think mor
 
 </description>
         <pubDate>Wed, 19 Aug 2015 00:00:00 -0400</pubDate>
-        <link>http://macbellingrath.com/2015/08/19/Swift-Error-Handling.html</link>
-        <guid isPermaLink="true">http://macbellingrath.com/2015/08/19/Swift-Error-Handling.html</guid>
+        <link>http://macbellingrath.com/blog/2015/08/19/Swift-Error-Handling.html</link>
+        <guid isPermaLink="true">http://macbellingrath.com/blog/2015/08/19/Swift-Error-Handling.html</guid>
         
+        
+        <category>blog</category>
         
       </item>
     
@@ -415,9 +427,11 @@ I’m excited to learn more about error handling, and how I can improve the read
 
 </description>
         <pubDate>Wed, 19 Aug 2015 00:00:00 -0400</pubDate>
-        <link>http://macbellingrath.com/2015/08/19/Guard-Statements-and-Throwing-Errors.html</link>
-        <guid isPermaLink="true">http://macbellingrath.com/2015/08/19/Guard-Statements-and-Throwing-Errors.html</guid>
+        <link>http://macbellingrath.com/blog/2015/08/19/Guard-Statements-and-Throwing-Errors.html</link>
+        <guid isPermaLink="true">http://macbellingrath.com/blog/2015/08/19/Guard-Statements-and-Throwing-Errors.html</guid>
         
+        
+        <category>blog</category>
         
       </item>
     
@@ -429,9 +443,11 @@ I’m excited to learn more about error handling, and how I can improve the read
 
 </description>
         <pubDate>Wed, 19 Aug 2015 00:00:00 -0400</pubDate>
-        <link>http://macbellingrath.com/2015/08/19/Getters-and-Setters.html</link>
-        <guid isPermaLink="true">http://macbellingrath.com/2015/08/19/Getters-and-Setters.html</guid>
+        <link>http://macbellingrath.com/blog/2015/08/19/Getters-and-Setters.html</link>
+        <guid isPermaLink="true">http://macbellingrath.com/blog/2015/08/19/Getters-and-Setters.html</guid>
         
+        
+        <category>blog</category>
         
       </item>
     
@@ -467,9 +483,11 @@ I’m excited to learn more about error handling, and how I can improve the read
 
 </description>
         <pubDate>Wed, 19 Aug 2015 00:00:00 -0400</pubDate>
-        <link>http://macbellingrath.com/2015/08/19/Class-Functions-and-Swift-Extensions.html</link>
-        <guid isPermaLink="true">http://macbellingrath.com/2015/08/19/Class-Functions-and-Swift-Extensions.html</guid>
+        <link>http://macbellingrath.com/blog/2015/08/19/Class-Functions-and-Swift-Extensions.html</link>
+        <guid isPermaLink="true">http://macbellingrath.com/blog/2015/08/19/Class-Functions-and-Swift-Extensions.html</guid>
         
+        
+        <category>blog</category>
         
       </item>
     

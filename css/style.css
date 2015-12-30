@@ -450,6 +450,9 @@ iframe{
 .bgc-white{
 	background-color:#ffffff;
 }
+.bgc-clear {
+    background-color: rgba(0, 0, 0.97, 1.0);
+}
 /* Button colour styles */
 
 .wire-btn-outer-space{

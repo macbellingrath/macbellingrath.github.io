@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <!-- _includes/base.html -->
+
+
+
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="http://macbellingrath.com/css/bootstrap.css">
+    <link rel="stylesheet" id="ppstyle" type="text/css" href="http://macbellingrath.com/css/style.css">
+    <link rel='stylesheet' href='http://macbellingrath.com/css/animate.css' /><link rel='stylesheet' href='http://macbellingrath.com/css/font-awesome.min.css'/><link rel='stylesheet' href='/css/ionicons.min.css'/><link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="http://macbellingrath.com/js/jquery-2.1.0.min.js"></script>
+    <script src="http://macbellingrath.com/js/bootstrap.js"></script>
+    <script src="http://macbellingrath.com/js/blocs.js"></script>
+    <title>Mac Bellingrath</title>
+</head>
+
+
+  <body>
+      <!-- Navigation Bloc -->
+<div class="bloc l-bloc bgc-white  sticky-nav" id="nav-bloc">
+	<div class="container bloc-sm">
+		<nav class="navbar row">
+			<div class="navbar-header">
+                <!-- _includes/base.html -->
+
+
+
+				<a class="navbar-brand" href="http://macbellingrath.com">Mac Bellingrath</a>
+				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse navbar-1">
+				<ul class="site-navigation nav navbar-nav">
+					<li>
+						<a href="http://macbellingrath.com">Home</a>
+					</li>
+                    <li>
+						<a href="http://macbellingrath.com/blog/index.html">Blog</a>
+					</li>
+                    <li>
+						<a href="http://macbellingrath.com/cv.html">CV</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+<!-- Navigation Bloc END -->
+     
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="page-container">
+<!-- bloc-1 -->
+<div class="bloc l-bloc bgc-white" id="bloc-1">
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Guard Statements and Throwing Errors</h1>
+    <p class="post-meta"><time datetime="2015-08-19T00:00:00-04:00" itemprop="datePublished">Aug 19, 2015</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Today, I learned more about using the guard statement and how to throw and catch errors. In my playground, I have written a function to make some cookies. The function accepts one argument, an array of type string. By marking my function with the ‘throws’ keyword, I am telling the compiler that my function is capable of throwing errors. When calling this function, one will be required ( by the compiler ) to call within a ‘do’ block, and must “try” and “catch”, appropriately. 
+Guard is a lot like ‘if’ in swift, except that it is always followed by an ‘else’ clause. The guard statement is evaluated, and if false, executes the code inside the ‘else’ clause. You can have many guard statements after another, but after your code evaluates a guard statement to be false, it will execute the else clause and skip to the end of the function. 
+I begin by declaring a variable named ‘pantry,’ initialized with an array of the ingredients in my pantry. I then try my ‘makeCookies’ function, passing in the pantry array. You can see that the function is throwing cookieErrors.NotEnoughButter. Because the error was caught, the playground prints out “You’re gonna need some butter.”
+I’m excited to learn more about error handling, and how I can improve the readability and intent of my code.
+<img src="https://raw.githubusercontent.com/macbellingrath/macbellingrath.github.io/master/Assets/1439839511_thumb.png" alt="Guard Statement Playground" />
+—–</p>
+
+
+  </div>
+
+</article>
+    </div>
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+ <div class="bloc l-bloc bgc-white" id="bloc-6">
+	<div class="container bloc-sm">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 col-sm-12">
+				<div class="col-sm-3 text-center">
+					<a class="social" href="https://twitter.com/mbellingrath"><span class="fa fa-twitter icon-md"></span></a>
+				</div>
+				<div class="col-sm-3 text-center">
+					<a class="social" href="http://github.com/macbellingrath"><span class="fa fa-github-alt icon-md"></span></a>
+				</div>
+				<div class="col-sm-3 text-center">
+					<a class="social" href="https://www.linkedin.com/in/mbellingrath"><span class="ion ion-social-linkedin icon-md"></span></a>
+				</div>
+				<div class="col-sm-3 text-center">
+					<a class "social" href="mailto: hello@macbellingrath.com?Subject=Hello%20Mac" target="_blank"><span class="ion ion-android-mail icon icon-mail icon-md"></span>
+                    
+                    </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</footer>
+
+
+  </body>
+
+</html>

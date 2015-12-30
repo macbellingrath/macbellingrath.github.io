@@ -1,0 +1,28 @@
+<!-- Navigation Bloc -->
+<div class="bloc l-bloc bgc-white  sticky-nav" id="nav-bloc">
+	<div class="container bloc-sm">
+		<nav class="navbar row">
+			<div class="navbar-header">
+                {% include base.html %}
+				<a class="navbar-brand" href="{{site.url}}">Mac Bellingrath</a>
+				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse navbar-1">
+				<ul class="site-navigation nav navbar-nav">
+					<li>
+						<a href="{{site.url}}">Home</a>
+					</li>
+                    <li>
+						<a href="{{site.url}}/blog/index.html">Blog</a>
+					</li>
+                    <li>
+						<a href="{{site.url}}/cv.html">CV</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+<!-- Navigation Bloc END -->

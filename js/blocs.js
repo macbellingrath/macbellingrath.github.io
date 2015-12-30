@@ -96,11 +96,10 @@ function stickyNavToggle()
 	var V = 0; // offset Value
 	var C = "sticky"; // Classes
 	
-	if($('.sticky-nav').parent().is('#hero-bloc')) // If nav is in hero animate in
-	{
+	
 		V = $('.sticky-nav').height();
 		C = "sticky animated fadeInDown";
-	}
+	
 	
 	if($(window).scrollTop() > V)
 	{  

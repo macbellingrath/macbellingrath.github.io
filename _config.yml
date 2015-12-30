@@ -10,15 +10,24 @@ title: Mac Bellingrath | iOS Developer
 email: hello@macbellingrath.com
 description: > 
 Mac Bellingrath | iOS Developer:
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: ""
 url: "http://macbellingrath.com" # the base hostname & protocol for your site
 twitter_username: mbellingrath
 github_username:  macbellingrath
 highlighter: pygments
 
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:         _sass
+  style:            :compressed
 
 
 # Build settings
 markdown: kramdown
 #Gems
 gems: [jekyll-paginate]
+
+paginate: 3
+paginate_path: "blog/page:num/"
