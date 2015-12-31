@@ -176,7 +176,7 @@
 }
 
 .post-list {
-    margin-left: 0;
+    margin-left: 10;
     list-style: none;
 
     > li {
@@ -196,11 +196,13 @@
 
 
 
+
 /**
  * Posts
  */
 .post-header {
     margin-bottom: $spacing-unit;
+    
 }
 
 .post-title {

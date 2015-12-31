@@ -57,11 +57,8 @@
      
     <div class="page-content">
       <div class="page-container">
-        <!-- Main container -->
-<div class="page-container">
-<!-- bloc-1 -->
-<div class="bloc l-bloc bgc-white" id="bloc-1">
-    <div class="posts">
+        <div class="bloc l-bloc bgc-white" id="bloc-1">
+<div class="posts">
   
   <article class="post">
     <h1 class="post-title">
@@ -70,14 +67,12 @@
       </a>
     </h1>
 
-    <time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time>
+      <p class="post-meta"><time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time></p>
 
     <p>Today, I learned more about using the guard statement and how to throw and catch errors. In my playground, I have written a function to make some cookies. The function accepts one argument, an array of type string. By marking my function with the ‘throws’ keyword, I am telling the compiler that my function is capable of throwing errors. When calling this function, one will be required ( by the compiler ) to call within a ‘do’ block, and must “try” and “catch”, appropriately. 
 Guard is a lot like ‘if’ in swift, except that it is always followed by an ‘else’ clause. The guard statement is evaluated, and if false, executes the code inside the ‘else’ clause. You can have many guard statements after another, but after your code evaluates a guard statement to be false, it will execute the else clause and skip to the end of the function. 
 I begin by declaring a variable named ‘pantry,’ initialized with an array of the ingredients in my pantry. I then try my ‘makeCookies’ function, passing in the pantry array. You can see that the function is throwing cookieErrors.NotEnoughButter. Because the error was caught, the playground prints out “You’re gonna need some butter.”
-I’m excited to learn more about error handling, and how I can improve the readability and intent of my code.
-<img src="https://raw.githubusercontent.com/macbellingrath/macbellingrath.github.io/master/Assets/1439839511_thumb.png" alt="Guard Statement Playground" />
-—–</p>
+I’m excited to learn more about error handling, and how I can improve the readability and intent of my code.</p>
 
 
   </article>
@@ -89,11 +84,9 @@ I’m excited to learn more about error handling, and how I can improve the read
       </a>
     </h1>
 
-    <time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time>
+      <p class="post-meta"><time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time></p>
 
-    <p>Properties can have getters and setters that offer a lot of convenience, especially in cases where you are doing a lot of calculation. After the declaration, all you have to do is write get and set, each followed by a set of curly braces. With these types of computed properties, we can determine the value of a variable by calculation. The setter allows us to set the values of other related variables when a new value is assigned to the computed property.
-<img src="https://raw.githubusercontent.com/macbellingrath/macbellingrath.github.io/master/Assets/getset.png" alt="Playground" />
-—–</p>
+    <h2 id="properties-can-have-getters-and-setters-that-offer-a-lot-of-convenience-especially-in-cases-where-you-are-doing-a-lot-of-calculation-after-the-declaration-all-you-have-to-do-is-write-get-and-set-each-followed-by-a-set-of-curly-braces-with-these-types-of-computed-properties-we-can-determine-the-value-of-a-variable-by-calculation-the-setter-allows-us-to-set-the-values-of-other-related-variables-when-a-new-value-is-assigned-to-the-computed-property">Properties can have getters and setters that offer a lot of convenience, especially in cases where you are doing a lot of calculation. After the declaration, all you have to do is write get and set, each followed by a set of curly braces. With these types of computed properties, we can determine the value of a variable by calculation. The setter allows us to set the values of other related variables when a new value is assigned to the computed property.</h2>
 
 
   </article>
@@ -105,7 +98,7 @@ I’m excited to learn more about error handling, and how I can improve the read
       </a>
     </h1>
 
-    <time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time>
+      <p class="post-meta"><time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time></p>
 
     <p>During a recent experimentation with Swift’s extensions, I was reminded about the important distinctions between class and instance methods. I was writing a simple extension of UIColor to save me from retyping the rgb values and converting them to floats. My first attempt looked like this:</p>
 
@@ -140,551 +133,23 @@ I’m excited to learn more about error handling, and how I can improve the read
   
 </div>
 
+<div class="row text-center">
 <div class="pagination">
   
+  
     <span class="pagination-item older">Older</span>
+
   
   
+
     <a class="pagination-item newer" href="/blog/page2/">Newer</a>
+
   
 </div>
-<!--
-    
-    
-	<div class="container bloc-md">
-		<div class="row">
-			<div class="col-sm-12">
-				<h3 class="mg-md">
-					Haskell and Swift
-				</h3>
-				<h5 class="mg-md">
-					Oct 18, 2015
-				</h5>
-				<p>
-					<p>After picking up Wayne Bishop’s <a href="http://waynewbishop.com/swift/"><em>Swift Algorithms and Data Structures</em></a>, I became interested in the usage of recursion and other patterns found in functional programming in my own Swift code. Learning more about functional programming in Swift has been a rabbit-hole in the best way. Next came <a href="https://www.objc.io/books/">Functional Programming in Swift</a>. As a multi-paradigm language, writing Swift code in a functional style has been really exciting. A role-model of mine, <a href="https://www.twitter.com/natashatherobot">NatashaTheRobot</a>, has been talking it up for some <a href="https://www.youtube.com/watch?v=tohEJSq9gds&amp;list=PLZyqQB76XCDkbAR4PwuOJ9IRcmnaxOgxL&amp;index=2">time</a>.
-In Joe Burgess’s (of the Flatiron School)  talk during <a href="https://www.youtube.com/watch?v=46nJlZ3RT_I">UIKonf 2015</a>, he explains how Haskell can direct the way that we learn Swift. Per Natasha’s recommendation, I just began the <a href="https://www.edx.org/course/introduction-functional-programming-delftx-fp101x-0">Introduction to Functional Programming</a> on edx.org. I cannot wait to see how many lessons I learn about Swift through learning Haskell. Check out the lesson and a repo I setup for the course <a href="https://github.com/macbellingrath/DelftX---FP101x">here</a>.
-—</p>
-
-
-				</p>
-			</div>
-		</div>
-	</div>
-    
-    
-	<div class="container bloc-md">
-		<div class="row">
-			<div class="col-sm-12">
-				<h3 class="mg-md">
-					Getting Started with Functional Swift
-				</h3>
-				<h5 class="mg-md">
-					Sep 9, 2015
-				</h5>
-				<p>
-					<p>Functional programming is something that I’ve put off while I learned Swift, fearing that it might overwhelm me with confusing or contradictory ideas. As I read more about functional programming in Swift, however, I find that my understanding of the language improves as a whole. If you’re interested in learning more about functional programming in Swift, start by demystifying the basics. You may remember that functions are types in the Swift language. They can be passed as arguments to other functions, just like Ints, Bools, Strings or Doubles. This language feature enables a programmer to decompose complex and specific functions into smaller pieces that can be reused. Functional programs are beginning to make a lot of sense to me as I think about the importances of readability and flexibility in my own code.</p>
-
-<p>Here are some code snippets from my playground experiments with functional programming in Swift.</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="c1">//: Functional Swift</span>
-
-<span class="k">import</span> <span class="n">UIKit</span>
-
-
-<span class="k">typealias</span> <span class="n">computation</span> <span class="o">=</span> <span class="n">Int</span> <span class="o">-&gt;</span> <span class="n">Int</span>
-
-<span class="c1">//add two ints together</span>
-
-<span class="k">func</span> <span class="n">addTwoInts</span><span class="p">(</span><span class="nl">x</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="nl">y</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-<span class="p">}</span>
-
-
-<span class="c1">//Add two ints curried function</span>
-
-<span class="k">func</span> <span class="n">add2</span><span class="p">(</span><span class="nl">x</span><span class="p">:</span><span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span> <span class="n">y</span> <span class="k">in</span> <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="p">}</span>
-<span class="p">}</span>
-
-
-<span class="n">add2</span><span class="p">(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="k">func</span> <span class="n">add3</span><span class="p">(</span><span class="nl">x</span><span class="p">:</span><span class="n">Int</span><span class="p">)(</span><span class="n">_</span> <span class="nl">y</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-    
-<span class="p">}</span>
-
-<span class="n">add3</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">1</span><span class="p">)</span>
-
-
-<span class="c1">// Define a custom operator</span>
-<span class="kr">infix</span> <span class="kr">operator</span> <span class="o">&gt;&gt;&gt;</span> <span class="p">{</span> <span class="kr">associativity</span> <span class="kr">left</span> <span class="p">}</span>
-
-<span class="k">func</span> <span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="nl">x</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="nl">y</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>
-    
-<span class="p">}</span>
-
-<span class="mi">8</span> <span class="o">&gt;&gt;&gt;</span> <span class="mi">8</span>
-
-<span class="c1">//: Chapter 4 - Map, Filter, Reduce</span>
-
-<span class="c1">//write a function that increments every member of an array</span>
-
-<span class="k">func</span> <span class="n">incrementArray</span><span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Int</span><span class="p">]</span> <span class="p">{</span>
-   
-    <span class="k">var</span> <span class="nl">result</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-    
-    <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">xs</span> <span class="p">{</span>
-        <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">result</span>
-    
-<span class="p">}</span>
-
-<span class="c1">// write a function that doubles an array</span>
-
-
-<span class="k">func</span> <span class="n">doubleArray</span><span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Int</span><span class="p">]</span> <span class="p">{</span>
-    <span class="k">var</span> <span class="nl">result</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-    
-    <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">xs</span> <span class="p">{</span>
-        <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="p">}</span>
-    
-    <span class="k">return</span> <span class="n">result</span>
-<span class="p">}</span>
-
-<span class="k">func</span> <span class="n">computeArray</span><span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">],</span> <span class="nl">f</span><span class="p">:</span> <span class="n">computation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Int</span><span class="p">]</span> <span class="p">{</span>
-    
-    <span class="k">var</span> <span class="nl">result</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-    
-    <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">xs</span> <span class="p">{</span>
-       <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">result</span>
-<span class="p">}</span>
-
-<span class="k">func</span> <span class="n">squared</span><span class="p">(</span><span class="nl">x</span><span class="p">:</span><span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
-<span class="p">}</span>
-
-<span class="k">var</span> <span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
-
-<span class="n">computeArray</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span> <span class="err">$</span><span class="mi">0</span> <span class="o">*</span> <span class="err">$</span><span class="mi">0</span> <span class="p">}</span>
-
-<span class="c1">// Write generic compute function</span>
-
-<span class="k">func</span> <span class="n">genericComputeArray</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">],</span> <span class="nl">f</span><span class="p">:</span> <span class="n">Int</span><span class="o">-&gt;</span> <span class="n">T</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="p">{</span>
-    
-    <span class="k">var</span> <span class="nl">result</span><span class="p">:</span> <span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-    
-    <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">xs</span> <span class="p">{</span>
-        <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-    <span class="p">}</span>
-    
-    <span class="k">return</span> <span class="n">result</span>
-<span class="p">}</span>
-
-<span class="n">genericComputeArray</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">x</span> <span class="k">in</span> <span class="k">return</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">3</span>
-<span class="p">}</span>
-
-<span class="c1">// Write generic function that works with array of any type</span>
-
-<span class="k">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">U</span><span class="o">&gt;</span><span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="nl">f</span><span class="p">:</span> <span class="n">T</span> <span class="o">-&gt;</span> <span class="n">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">U</span><span class="p">]</span> <span class="p">{</span>
-    <span class="k">var</span> <span class="nl">result</span><span class="p">:</span> <span class="p">[</span><span class="n">U</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-    
-    <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">xs</span> <span class="p">{</span>
-        <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">result</span>
-<span class="p">}</span>
-
-<span class="c1">// Swift Standard Library  already has map</span>
-
-<span class="k">func</span> <span class="n">doubleArray2</span><span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">Int</span><span class="p">]</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">xs</span><span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">x</span> <span class="k">in</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">}</span>
-<span class="p">}</span>
-
-
-<span class="c1">// Filter</span>
-
-<span class="k">func</span> <span class="n">filter</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="nl">check</span><span class="p">:</span> <span class="n">T</span> <span class="o">-&gt;</span> <span class="n">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="p">{</span>
-    
-    <span class="k">var</span> <span class="nl">result</span><span class="p">:</span> <span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-    
-    <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">xs</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="n">check</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">result</span>
-<span class="p">}</span>
-
-<span class="k">let</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Will&quot;</span><span class="p">,</span> <span class="s">&quot;Mac&quot;</span><span class="p">,</span> <span class="s">&quot;Jay&quot;</span><span class="p">]</span>
-
-<span class="k">let</span> <span class="n">namesWithLetterA</span> <span class="o">=</span> <span class="n">names</span><span class="p">.</span><span class="n">filter</span> <span class="p">{</span> <span class="n">name</span> <span class="k">in</span> <span class="n">name</span><span class="p">.</span><span class="n">containsString</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">)}</span>
-
-
-<span class="n">namesWithLetterA</span>
-
-
-<span class="c1">//Reduce</span>
-
-<span class="k">let</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-
-<span class="k">func</span> <span class="n">reduce</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span> <span class="n">R</span><span class="o">&gt;</span><span class="p">(</span><span class="nl">arr</span><span class="p">:</span> <span class="p">[</span><span class="n">A</span><span class="p">],</span> <span class="nl">initialValue</span><span class="p">:</span> <span class="n">R</span><span class="p">,</span> <span class="nl">combine</span><span class="p">:</span> <span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">R</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">R</span> <span class="p">{</span>
-   
-    <span class="k">var</span> <span class="n">result</span> <span class="o">=</span> <span class="n">initialValue</span>
-    
-    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">arr</span> <span class="p">{</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">combine</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">result</span>
-<span class="p">}</span>
-<span class="k">func</span> <span class="n">sumUsingReduce</span><span class="p">(</span><span class="nl">xs</span><span class="p">:</span> <span class="p">[</span><span class="n">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">reduce</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="nl">initialValue</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">result</span><span class="p">,</span> <span class="n">x</span> <span class="k">in</span> <span class="n">result</span> <span class="o">+</span> <span class="n">x</span> <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="n">sumUsingReduce</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-
-<span class="c1">// SSL has reduce function</span>
-
-
-<span class="k">struct</span> <span class="n">City</span> <span class="p">{</span>
-    <span class="k">let</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span>
-    <span class="k">let</span> <span class="nl">population</span><span class="p">:</span> <span class="n">Int</span>
-<span class="p">}</span>
-
-<span class="c1">//cities with pop in thousands</span>
-
-<span class="k">let</span> <span class="n">paris</span> <span class="o">=</span> <span class="n">City</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Paris&quot;</span><span class="p">,</span> <span class="nl">population</span><span class="p">:</span> <span class="mi">2243</span><span class="p">)</span>
-<span class="k">let</span> <span class="n">madrid</span> <span class="o">=</span> <span class="n">City</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Madrid&quot;</span><span class="p">,</span> <span class="nl">population</span><span class="p">:</span> <span class="mi">3216</span><span class="p">)</span>
-<span class="k">let</span> <span class="n">amsterdam</span> <span class="o">=</span> <span class="n">City</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Amsterdam&quot;</span><span class="p">,</span> <span class="nl">population</span><span class="p">:</span> <span class="mi">811</span><span class="p">)</span>
-<span class="k">let</span> <span class="n">berlin</span> <span class="o">=</span> <span class="n">City</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Berlin&quot;</span><span class="p">,</span> <span class="nl">population</span><span class="p">:</span> <span class="mi">3397</span><span class="p">)</span>
-
-<span class="k">let</span> <span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="n">paris</span><span class="p">,</span> <span class="n">madrid</span><span class="p">,</span> <span class="n">amsterdam</span><span class="p">,</span> <span class="n">berlin</span><span class="p">]</span>
-
-<span class="c1">//scale population up</span>
-<span class="k">func</span> <span class="n">scale</span><span class="p">(</span><span class="nl">city</span><span class="p">:</span> <span class="n">City</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">City</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">City</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="n">city</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="nl">population</span><span class="p">:</span> <span class="n">city</span><span class="p">.</span><span class="n">population</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="p">}</span>
-
-
-<span class="n">cities</span><span class="p">.</span><span class="n">filter</span><span class="p">{</span> <span class="n">city</span> <span class="k">in</span> <span class="n">city</span><span class="p">.</span><span class="n">population</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="p">}</span>
-    <span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
-    <span class="p">.</span><span class="n">reduce</span><span class="p">(</span><span class="s">&quot;City: Population&quot;</span><span class="p">){</span> <span class="n">result</span><span class="p">,</span> <span class="n">c</span> <span class="k">in</span>
-        <span class="k">return</span> <span class="n">result</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">+</span> <span class="s">&quot;\(c.name) : \(c.population)&quot;</span>
-        
-<span class="p">}</span></code></pre></figure>
-
-
-				</p>
-			</div>
-		</div>
-	</div>
-    
-    
-	<div class="container bloc-md">
-		<div class="row">
-			<div class="col-sm-12">
-				<h3 class="mg-md">
-					Generic Types
-				</h3>
-				<h5 class="mg-md">
-					Aug 28, 2015
-				</h5>
-				<p>
-					<p>Swift is a fantastic programming language for many reasons. For beginners and experienced programmers alike, Swift offers a lot. As someone new to programming, Swift’s syntax is expressive and easy to understand. Experienced programmers will enjoy Swift’s modern language features and capabilities. Generics are interesting to me, and I’ve become more comfortable with them as I’ve learned more about Swift.</p>
-
-<h3 id="about-generics">About generics</h3>
-<p>Generics are self-describing. In Swift, generics allow you to write flexible code that avoids redundancy, but retains clarity. As an example, the swap method in the Swift standard library enables you to swap two instances, as long as they are of the same type. This is achieved through generics.</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">var</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
-
-<span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
-<span class="n">print</span><span class="p">(</span><span class="s">&quot;a is now \(a) and b is now \(b)&quot;</span><span class="p">)</span>
-<span class="c1">//prints &quot;a is now 2 and b is now 1&quot;</span></code></pre></figure>
-
-<p>Arrays and Dictionaries are, in fact, generic collections. They hold values of any specified type.</p>
-
-<h3 id="type-parameters">Type parameters</h3>
-<p>You specify a name for a generic parameter by putting the <em>placeholder</em> after the function name, in angle brackets.</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="n">swapTwoValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">inout</span> <span class="nl">a</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="k">inout</span> <span class="n">_</span> <span class="nl">b</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span></code></pre></figure>
-
-<p>In the method body, you can use the generic type parameter in the place where you might normally use a local variable name.</p>
-
-				</p>
-			</div>
-		</div>
-	</div>
-    
-    
-	<div class="container bloc-md">
-		<div class="row">
-			<div class="col-sm-12">
-				<h3 class="mg-md">
-					Reference Cycles
-				</h3>
-				<h5 class="mg-md">
-					Aug 24, 2015
-				</h5>
-				<p>
-					<p>Swift is pretty great at managing memory automatically, it uses ARC to allocate memory when it’s needed, and free it up when it isn’t. I learned more about the <em>old way</em> of doing things, before automatic reference counting, and I’m here to tell you that ARC is your friend.</p>
-
-<h3 id="so-how-does-arc-work">So how does ARC work?</h3>
-<p>The simplest explanation is that ARC automatically allocates memory when you create an instance of a reference type. ARC then keeps track of the number of properties, vars, and lets where you are referencing that instance. This way, ARC will never accidentally deallocate an instance while it’s still being used. If it did, when we tried to access the instance, its properties, or its methods, our app would crash.</p>
-
-<h3 id="avoiding-strong-reference-cycles">Avoiding strong reference cycles</h3>
-<p>One of the more complicated matters in memory management is avoiding strong reference cycles between instances. 
-When you have two instances that have strong references to each-other, the reference count will never be zero, and ARC will never deallocate them. Here is an example:</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">class</span> <span class="n">Minion</span> <span class="p">{</span>
-  
-    <span class="k">let</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span>
-    
-    <span class="k">init</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nb">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-    <span class="p">}</span>
-    
-    <span class="k">var</span> <span class="nl">master</span><span class="p">:</span> <span class="n">Master</span><span class="o">?</span>
-    
-    <span class="k">deinit</span> <span class="p">{</span>
-        <span class="n">print</span><span class="p">(</span><span class="s">&quot;\(name) is being deinitialized&quot;</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="k">class</span> <span class="n">Master</span> <span class="p">{</span>
-    
-    <span class="k">let</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span>
-    
-    <span class="k">var</span> <span class="nl">minion</span><span class="p">:</span> <span class="n">Minion</span><span class="o">?</span>
-    
-    <span class="k">init</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nb">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-    <span class="p">}</span>
-    <span class="k">deinit</span> <span class="p">{</span>
-        <span class="n">print</span><span class="p">(</span><span class="s">&quot;Master \(name) is being deinitialized&quot;</span><span class="p">)</span>
-    <span class="p">}</span>
-
-    
-<span class="p">}</span></code></pre></figure>
-
-<p>Above, I created two classes: Minion and Master. Minion instances will have a name property and an optional Master property. Next, let’s create some instances of each class. The two variables are of optional type so that we can later assign them nil values to test if ARC deallocates them.</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="nl">bob</span><span class="p">:</span> <span class="n">Minion</span><span class="o">?</span>
-<span class="n">bob</span> <span class="o">=</span> <span class="n">Minion</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Bob&quot;</span><span class="p">)</span>
-
-<span class="k">var</span> <span class="nl">scarlettOverKill</span> <span class="p">:</span> <span class="n">Master</span><span class="o">?</span>
-<span class="n">scarlettOverKill</span> <span class="o">=</span> <span class="n">Master</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Scarlett Overkill&quot;</span><span class="p">)</span></code></pre></figure>
-
-<p>Since the Master property is an optional, its default is nil, and likewise for the optional Minion property in Master. Now that we have our instances, we can link them together…</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">bob</span><span class="o">!</span><span class="p">.</span><span class="n">master</span> <span class="o">=</span> <span class="n">scarlettOverKill</span>
-<span class="n">scarlettOverKill</span><span class="o">!</span><span class="p">.</span><span class="n">minion</span> <span class="o">=</span> <span class="n">bob</span></code></pre></figure>
-
-<p>The problem is that now, even if we do the following:</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">bob</span> <span class="o">=</span> <span class="nb">nil</span>
-<span class="n">scarlettOverkill</span>  <span class="o">=</span> <span class="nb">nil</span></code></pre></figure>
-
-<p>Our deinit messages will never print because both instances still have strong references to each other.</p>
-
-<h3 id="how-do-we-fix-memory-cycles">How do we fix memory cycles?</h3>
-<p>Swift addresses the issue above by letting us tell ARC that an instance can refer to another instance without keeping its strong reference. Swift uses the two keywords, “weak” and “unowned.”</p>
-
-<p>We use <em>weak</em> when it’s possible for the reference to become nil at some point. In our example, a minion’s master could become nil at some point.</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">class</span> <span class="n">Minion</span> <span class="p">{</span>
-<span class="p">...</span>
-<span class="k">weak</span> <span class="k">var</span> <span class="nl">master</span><span class="p">:</span> <span class="n">Master</span><span class="o">?</span>
-
-<span class="p">}</span></code></pre></figure>
-
-<p>We use <em>unowned</em> when we know that the reference will always have a value. Because of this, when we use ‘unowned’ our reference can only be of a non-optional type. For argument’s sake, let’s say that minions will <strong>always have a master.</strong> With this assumption, we could write the following (changing from our example above):</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">class</span> <span class="n">Minion</span> <span class="p">{</span>
-<span class="p">...</span>
-<span class="kr">unowned</span> <span class="k">let</span> <span class="nl">master</span><span class="p">:</span> <span class="n">Master</span>
-
-<span class="p">}</span></code></pre></figure>
-
-<p>In either case, if we were to set bob or scarlettOverkill to nil, our deinitialization message will now print out because ARC has deallocated them.</p>
-
-
-				</p>
-			</div>
-		</div>
-	</div>
-    
-    
-	<div class="container bloc-md">
-		<div class="row">
-			<div class="col-sm-12">
-				<h3 class="mg-md">
-					Type Properties
-				</h3>
-				<h5 class="mg-md">
-					Aug 21, 2015
-				</h5>
-				<p>
-					<p>In addition to instance properties, structs, enums, and classes can also have type properties. The difference is that instance properties belong to an instance, and type properties belong to the type. For example, if we had a struct ‘Fruit’ and declared a stored instance property variable ‘name,’ every time that we created an instance of that struct, it would have its own unique value for that property.</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">Fruit</span> <span class="p">{</span>
-    
-    <span class="k">var</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="o">!</span>
-    
-<span class="p">}</span></code></pre></figure>
-
-<p>So we could create an instance of Fruit and assign it the name of “banana”.</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">banana</span> <span class="o">=</span> <span class="n">Fruit</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;banana&quot;</span><span class="p">)</span></code></pre></figure>
-
-<p>So we have our banana, but what if we wanted to give our Fruit struct a property that applied to <em>all</em> fruit? This is where <strong>type</strong> properties come in. Type properties do not belong to each instance of the type, but to the type itself. This means that there is only one copy of a specific type property, regardless of how many instances of the type that we have. Let’s say that we want to declare a constant that would apply to all fruit, perhaps the recommended servings per day:</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">Fruit</span> <span class="p">{</span>    
-    <span class="k">static</span> <span class="k">let</span> <span class="n">recommendedServingsPerDay</span> <span class="o">=</span> <span class="mi">9</span>
-    <span class="k">var</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="o">!</span>
-<span class="p">}</span></code></pre></figure>
-
-<p>Notice the use of the keyword <strong>Static</strong> at the beginning of the declaration. This indicates that this constant belongs to our Fruit type, not to individual instances of Fruit. If I were to type something like:</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">print</span><span class="p">(</span><span class="n">banana</span><span class="p">.</span><span class="n">reommendedServingsPerDay</span><span class="p">)</span></code></pre></figure>
-
-<p>The compiler will tell you that Fruit does not have a member named recommendedServingsPerDay, and this is true because recommendedServingsPerDay belongs to our <em>type</em>.</p>
-
-<p>Note that stored type properties must be given a default value, unlike stored instance properties.</p>
-
-				</p>
-			</div>
-		</div>
-	</div>
-    
-    
-	<div class="container bloc-md">
-		<div class="row">
-			<div class="col-sm-12">
-				<h3 class="mg-md">
-					Swift-er Error Handling
-				</h3>
-				<h5 class="mg-md">
-					Aug 19, 2015
-				</h5>
-				<p>
-					<p>My initial impression of do/try/catch in Swift 2 was that it would only make my code longer and more complex. I was comfortable using optionals and simply checking/ unwrapping them with if/let syntax. Further reading has prompted me to realize that the new error-handling model is better for several reasons:</p>
-
-<p>When you simply check that an optional is non-nil, you aren’t really handling the error. Throwing and catching errors forces you to deal with the errors rather than skip execution.
-Do/try/catch allows you to recover. If you catch the errors thrown by the method that you are calling in the do{} block, you’ll be able to recover and tell your user what’s going on.
-Writing your error enum (with ErrorType conformance) encourages you to think more intently about the possible error cases during development rather than when bugs start popping up.
-—–</p>
-
-
-				</p>
-			</div>
-		</div>
-	</div>
-    
-    
-	<div class="container bloc-md">
-		<div class="row">
-			<div class="col-sm-12">
-				<h3 class="mg-md">
-					Guard Statements and Throwing Errors
-				</h3>
-				<h5 class="mg-md">
-					Aug 19, 2015
-				</h5>
-				<p>
-					<p>Today, I learned more about using the guard statement and how to throw and catch errors. In my playground, I have written a function to make some cookies. The function accepts one argument, an array of type string. By marking my function with the ‘throws’ keyword, I am telling the compiler that my function is capable of throwing errors. When calling this function, one will be required ( by the compiler ) to call within a ‘do’ block, and must “try” and “catch”, appropriately. 
-Guard is a lot like ‘if’ in swift, except that it is always followed by an ‘else’ clause. The guard statement is evaluated, and if false, executes the code inside the ‘else’ clause. You can have many guard statements after another, but after your code evaluates a guard statement to be false, it will execute the else clause and skip to the end of the function. 
-I begin by declaring a variable named ‘pantry,’ initialized with an array of the ingredients in my pantry. I then try my ‘makeCookies’ function, passing in the pantry array. You can see that the function is throwing cookieErrors.NotEnoughButter. Because the error was caught, the playground prints out “You’re gonna need some butter.”
-I’m excited to learn more about error handling, and how I can improve the readability and intent of my code.
-<img src="https://raw.githubusercontent.com/macbellingrath/macbellingrath.github.io/master/Assets/1439839511_thumb.png" alt="Guard Statement Playground" />
-—–</p>
-
-
-				</p>
-			</div>
-		</div>
-	</div>
-    
-    
-	<div class="container bloc-md">
-		<div class="row">
-			<div class="col-sm-12">
-				<h3 class="mg-md">
-					Getters and Setters
-				</h3>
-				<h5 class="mg-md">
-					Aug 19, 2015
-				</h5>
-				<p>
-					<p>Properties can have getters and setters that offer a lot of convenience, especially in cases where you are doing a lot of calculation. After the declaration, all you have to do is write get and set, each followed by a set of curly braces. With these types of computed properties, we can determine the value of a variable by calculation. The setter allows us to set the values of other related variables when a new value is assigned to the computed property.
-<img src="https://raw.githubusercontent.com/macbellingrath/macbellingrath.github.io/master/Assets/getset.png" alt="Playground" />
-—–</p>
-
-
-				</p>
-			</div>
-		</div>
-	</div>
-    
-    
-	<div class="container bloc-md">
-		<div class="row">
-			<div class="col-sm-12">
-				<h3 class="mg-md">
-					Using Class Functions in Swift Extensions
-				</h3>
-				<h5 class="mg-md">
-					Aug 19, 2015
-				</h5>
-				<p>
-					<p>During a recent experimentation with Swift’s extensions, I was reminded about the important distinctions between class and instance methods. I was writing a simple extension of UIColor to save me from retyping the rgb values and converting them to floats. My first attempt looked like this:</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">extension</span> <span class="bp">UIColor</span><span class="p">{</span>
-<span class="k">func</span> <span class="n">lightRedColor</span><span class="p">()</span><span class="o">-&gt;</span> <span class="bp">UIColor</span> <span class="p">{</span>
-<span class="k">return</span> <span class="bp">UIColor</span><span class="p">(</span><span class="nl">red</span><span class="p">:</span> <span class="mi">144</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">green</span><span class="p">:</span> <span class="mi">80</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">blue</span><span class="p">:</span> <span class="mi">89</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">alpha</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
-
-<p>When I went to declare my color variable, Xcode wouldn’t let me call my new function on UIColor. Instead, I would have had to create an instance using a predefined public class method declared in UIColor and then call my function on that instance.</p>
-
-<p>It might look like this garbage:</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">myColor</span> <span class="o">=</span> <span class="bp">UIColor</span><span class="p">.</span><span class="n">lightGrayColor</span><span class="p">().</span><span class="n">lightRedColor</span><span class="p">()</span></code></pre></figure>
-
-<p>When I looked at the declaration for .lightGrayColor(), I realized that it must be declared as a class function, not as an instance method.</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">extension</span> <span class="bp">UIColor</span><span class="p">{</span>
-<span class="k">class</span> <span class="k">func</span> <span class="n">lightRedColor</span><span class="p">()</span><span class="o">-&gt;</span> <span class="bp">UIColor</span> <span class="p">{</span>
-<span class="k">return</span> <span class="bp">UIColor</span><span class="p">(</span><span class="nl">red</span><span class="p">:</span> <span class="mi">144</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">green</span><span class="p">:</span> <span class="mi">80</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">blue</span><span class="p">:</span> <span class="mi">89</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">alpha</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
-
-<p>And now, I can call my function on UIColor.</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">myColor</span> <span class="o">=</span> <span class="bp">UIColor</span><span class="p">.</span><span class="n">lightRedColor</span><span class="p">()</span></code></pre></figure>
-
-<p>It was a simple error, but it served as a good reminder to me to pay attention to when I should be marking my functions with the class keyword.</p>
-
-
-				</p>
-			</div>
-		</div>
-	</div>
-    
-</div>
--->
-<!-- bloc-1 END -->
-<!-- bloc-0 END -->
-
+    </div>
 
 </div>
-<!-- Main container END -->
+
 
 
       </div>

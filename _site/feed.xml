@@ -5,8 +5,8 @@
     <description></description>
     <link>http://macbellingrath.com/</link>
     <atom:link href="http://macbellingrath.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 30 Dec 2015 13:42:52 -0500</pubDate>
-    <lastBuildDate>Wed, 30 Dec 2015 13:42:52 -0500</lastBuildDate>
+    <pubDate>Thu, 31 Dec 2015 11:37:51 -0500</pubDate>
+    <lastBuildDate>Thu, 31 Dec 2015 11:37:51 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -421,9 +421,7 @@ Writing your error enum (with ErrorType conformance) encourages you to think mor
         <description>&lt;p&gt;Today, I learned more about using the guard statement and how to throw and catch errors. In my playground, I have written a function to make some cookies. The function accepts one argument, an array of type string. By marking my function with the ‘throws’ keyword, I am telling the compiler that my function is capable of throwing errors. When calling this function, one will be required ( by the compiler ) to call within a ‘do’ block, and must “try” and “catch”, appropriately. 
 Guard is a lot like ‘if’ in swift, except that it is always followed by an ‘else’ clause. The guard statement is evaluated, and if false, executes the code inside the ‘else’ clause. You can have many guard statements after another, but after your code evaluates a guard statement to be false, it will execute the else clause and skip to the end of the function. 
 I begin by declaring a variable named ‘pantry,’ initialized with an array of the ingredients in my pantry. I then try my ‘makeCookies’ function, passing in the pantry array. You can see that the function is throwing cookieErrors.NotEnoughButter. Because the error was caught, the playground prints out “You’re gonna need some butter.”
-I’m excited to learn more about error handling, and how I can improve the readability and intent of my code.
-&lt;img src=&quot;https://raw.githubusercontent.com/macbellingrath/macbellingrath.github.io/master/Assets/1439839511_thumb.png&quot; alt=&quot;Guard Statement Playground&quot; /&gt;
-—–&lt;/p&gt;
+I’m excited to learn more about error handling, and how I can improve the readability and intent of my code.&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 19 Aug 2015 00:00:00 -0400</pubDate>
@@ -437,9 +435,7 @@ I’m excited to learn more about error handling, and how I can improve the read
     
       <item>
         <title>Getters and Setters</title>
-        <description>&lt;p&gt;Properties can have getters and setters that offer a lot of convenience, especially in cases where you are doing a lot of calculation. After the declaration, all you have to do is write get and set, each followed by a set of curly braces. With these types of computed properties, we can determine the value of a variable by calculation. The setter allows us to set the values of other related variables when a new value is assigned to the computed property.
-&lt;img src=&quot;https://raw.githubusercontent.com/macbellingrath/macbellingrath.github.io/master/Assets/getset.png&quot; alt=&quot;Playground&quot; /&gt;
-—–&lt;/p&gt;
+        <description>&lt;h2 id=&quot;properties-can-have-getters-and-setters-that-offer-a-lot-of-convenience-especially-in-cases-where-you-are-doing-a-lot-of-calculation-after-the-declaration-all-you-have-to-do-is-write-get-and-set-each-followed-by-a-set-of-curly-braces-with-these-types-of-computed-properties-we-can-determine-the-value-of-a-variable-by-calculation-the-setter-allows-us-to-set-the-values-of-other-related-variables-when-a-new-value-is-assigned-to-the-computed-property&quot;&gt;Properties can have getters and setters that offer a lot of convenience, especially in cases where you are doing a lot of calculation. After the declaration, all you have to do is write get and set, each followed by a set of curly braces. With these types of computed properties, we can determine the value of a variable by calculation. The setter allows us to set the values of other related variables when a new value is assigned to the computed property.&lt;/h2&gt;
 
 </description>
         <pubDate>Wed, 19 Aug 2015 00:00:00 -0400</pubDate>
