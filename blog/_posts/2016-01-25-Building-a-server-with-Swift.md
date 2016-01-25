@@ -10,6 +10,7 @@ It is cool to see that programmers are excited about using Swift to build for us
 
 In order to use it, you'll need Swift 2.2. You can get it [here]("https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2016-01-11-a/swift-2.2-SNAPSHOT-2016-01-11-a-osx.pkg").
 The installer will install an Xcode toolchain, which includes the resources you need to work with a particular version of Swift. To use the toolchain from the command-line, I had to add it to my Path.
+
 > $ export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
 
 I chose to use the [Swift Package Manager](https://github.com/apple/swift-package-manager) for dependency management. 
@@ -30,12 +31,12 @@ let package = Package(
 
 Then, run **$ swift build**. You should see it fetch the dependency and build it in the directory you just created.
 
->Cloning https://github.com/tannernelson/vapor.git
-Using version 1.0.5 of package vapor
-Compiling Swift Module 'Vapor' (12 sources)
-Linking Library:  .build/debug/Vapor.a
-Compiling Swift Module 'server' (1 sources)
-Linking Executable:  .build/debug/server
+> Cloning https://github.com/tannernelson/vapor.git
+> Using version 1.0.5 of package vapor
+> Compiling Swift Module 'Vapor' (12 sources)
+> Linking Library:  .build/debug/Vapor.a
+> Compiling Swift Module 'server' (1 sources)
+> Linking Executable:  .build/debug/server
 
 In your project directory, create a file named main.swift, and we'll import our module.
 {% highlight swift %}
@@ -60,6 +61,7 @@ Route.get("date") { request in
 {% endhighlight %}
 
 This returns:
+
 >{ "greeting": "2016-01-25 14:26:22 +0000" }
 
 In order to test the server out, run **$ swift build**. An executable will be put in *.build/debug/server* . Run the executable from there, and make sure that your ports are open. Navigate to the port that you specified when you created your server (ie: localhost: 8080) and a route that you created in your swift file ("/date"). Voila, a simple server, written in Swift!
