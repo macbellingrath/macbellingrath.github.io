@@ -67,7 +67,7 @@ Route.get("date") { request in
 
 This returns:
 
->{ "greeting": "2016-01-25 14:26:22 +0000" }
+>{ "date": "2016-01-25 14:26:22 +0000" }
 
 In order to test the server out, run **$ swift build**. An executable will be put in *.build/debug/server* . Run the executable from there, and make sure that your ports are open. Navigate to the port that you specified when you created your server (ie: localhost: 8080) and a route that you created in your swift file ("/date"). Voila, a simple server, written in Swift!
 
