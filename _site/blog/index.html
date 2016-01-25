@@ -62,6 +62,97 @@
   
   <article class="post">
     <h1 class="post-title">
+      <a href="/blog/2016/01/25/Building-a-server-with-Swift.html">
+        Building a server with Swift
+      </a>
+    </h1>
+
+      <p class="post-meta"><time datetime="2016-01-25T00:00:00-05:00" class="post-date">25 Jan 2016</time></p>
+
+    <p>It is cool to see that programmers are excited about using Swift to build for uses and platforms beyond Apple. There are several web frameworks written in Swift, but the most elegant that I have seen so far is <a href="https://github.com/tannernelson/vapor">Vapor</a>.</p>
+
+<h5 id="from-the-repo">From the repo:</h5>
+<blockquote>
+  <p>“A Laravel/Lumen Inspired Web Framework for Swift that works on iOS, OS X, and Ubuntu.”</p>
+</blockquote>
+
+<p>In order to use it, you’ll need Swift 2.2. You can get it <a href="&quot;https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2016-01-11-a/swift-2.2-SNAPSHOT-2016-01-11-a-osx.pkg&quot;">here</a>.
+The installer will install an Xcode toolchain, which includes the resources you need to work with a particular version of Swift. To use the toolchain from the command-line, I had to add it to my Path.</p>
+
+<blockquote>
+  <p>$ export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:”${PATH}”</p>
+</blockquote>
+
+<p>I chose to use the <a href="https://github.com/apple/swift-package-manager">Swift Package Manager</a> for dependency management.</p>
+
+<h4 id="now-the-fun-stuff">Now, the fun stuff.</h4>
+
+<p>Create an empty directory and name it whatever you like. Then create a file named “Package.swift”. The SPM uses this manifest file to fetch and build any dependencies.  The syntax for my Package.swift file is:</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">import</span> <span class="n">PackageDescription</span>
+
+<span class="k">let</span> <span class="n">package</span> <span class="o">=</span> <span class="n">Package</span><span class="p">(</span>
+	<span class="nl">name</span><span class="p">:</span> <span class="s">&quot;server&quot;</span><span class="p">,</span>
+    <span class="nl">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">.</span><span class="n">Package</span><span class="p">(</span><span class="nl">url</span><span class="p">:</span> <span class="s">&quot;https://github.com/tannernelson/vapor.git&quot;</span><span class="p">,</span> <span class="nl">majorVersion</span><span class="p">:</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">])</span></code></pre></figure>
+
+<p>Then, run <strong>$ swift build</strong>. You should see it fetch the dependency and build it in the directory you just created.</p>
+
+<blockquote>
+  <p>Cloning https://github.com/tannernelson/vapor.git</p>
+</blockquote>
+
+<blockquote>
+  <p>Using version 1.0.5 of package vapor</p>
+</blockquote>
+
+<blockquote>
+  <p>Compiling Swift Module ‘Vapor’ (12 sources)</p>
+</blockquote>
+
+<blockquote>
+  <p>Linking Library:  .build/debug/Vapor.a</p>
+</blockquote>
+
+<blockquote>
+  <p>Compiling Swift Module ‘server’ (1 sources)</p>
+</blockquote>
+
+<blockquote>
+  <p>Linking Executable:  .build/debug/server</p>
+</blockquote>
+
+<p>In your project directory, create a file named main.swift, and we’ll import our module.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">import</span> <span class="n">Vapor</span>
+<span class="k">import</span> <span class="n">Foundation</span></code></pre></figure>
+
+<p>Vapor’s syntax is simple. We create our server by initializing an instance of Server, and call .run() to start it. You may also pass .run() an argument for the port that you want to run your server on.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">server</span> <span class="o">=</span> <span class="n">Server</span><span class="p">()</span>
+<span class="n">server</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="nl">port</span><span class="p">:</span> <span class="mi">8080</span><span class="p">)</span></code></pre></figure>
+
+<p>You can specify routes. To respond with JSON, create a dictionary to return from your Route.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">Route</span><span class="p">.</span><span class="kr">get</span><span class="p">(</span><span class="s">&quot;date&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="n">request</span> <span class="k">in</span>
+    <span class="k">return</span> <span class="p">[</span><span class="s">&quot;date&quot;</span> <span class="o">:</span> <span class="n">String</span><span class="p">(</span><span class="bp">NSDate</span><span class="p">())</span> <span class="p">]</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>This returns:</p>
+
+<blockquote>
+  <p>{ “greeting”: “2016-01-25 14:26:22 +0000” }</p>
+</blockquote>
+
+<p>In order to test the server out, run <strong>$ swift build</strong>. An executable will be put in <em>.build/debug/server</em> . Run the executable from there, and make sure that your ports are open. Navigate to the port that you specified when you created your server (ie: localhost: 8080) and a route that you created in your swift file (“/date”). Voila, a simple server, written in Swift!</p>
+
+<p>Vapor also supports views and controllers, and it looks like they are working on implementing resource controllers. I’m excited to see how the community continues to embrace Swift and demonstrate all of its possibilities.</p>
+
+  </article>
+  
+  <article class="post">
+    <h1 class="post-title">
       <a href="/blog/2015/10/18/Haskell-and-Swift.html">
         Haskell and Swift
       </a>
@@ -285,45 +376,14 @@ In Joe Burgess’s (of the Flatiron School)  talk during <a href="https://www.yo
 
   </article>
   
-  <article class="post">
-    <h1 class="post-title">
-      <a href="/blog/2015/08/28/Generic-Types.html">
-        Generic Types
-      </a>
-    </h1>
-
-      <p class="post-meta"><time datetime="2015-08-28T00:00:00-04:00" class="post-date">28 Aug 2015</time></p>
-
-    <p>Swift is a fantastic programming language for many reasons. For beginners and experienced programmers alike, Swift offers a lot. As someone new to programming, Swift’s syntax is expressive and easy to understand. Experienced programmers will enjoy Swift’s modern language features and capabilities. Generics are interesting to me, and I’ve become more comfortable with them as I’ve learned more about Swift.</p>
-
-<h3 id="about-generics">About generics</h3>
-<p>Generics are self-describing. In Swift, generics allow you to write flexible code that avoids redundancy, but retains clarity. As an example, the swap method in the Swift standard library enables you to swap two instances, as long as they are of the same type. This is achieved through generics.</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">var</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
-
-<span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
-<span class="n">print</span><span class="p">(</span><span class="s">&quot;a is now \(a) and b is now \(b)&quot;</span><span class="p">)</span>
-<span class="c1">//prints &quot;a is now 2 and b is now 1&quot;</span></code></pre></figure>
-
-<p>Arrays and Dictionaries are, in fact, generic collections. They hold values of any specified type.</p>
-
-<h3 id="type-parameters">Type parameters</h3>
-<p>You specify a name for a generic parameter by putting the <em>placeholder</em> after the function name, in angle brackets.</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="n">swapTwoValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">inout</span> <span class="nl">a</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="k">inout</span> <span class="n">_</span> <span class="nl">b</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span></code></pre></figure>
-
-<p>In the method body, you can use the generic type parameter in the place where you might normally use a local variable name.</p>
-
-  </article>
-  
 </div>
 
 <div class="row text-center">
 <div class="pagination">
   
 
-  <a class="pagination-item older" href="/blog/page2/">Older</a>
+  <a class="pagination-item older" 
+     href="/blog/page2/">Older</a>
 
 
   

@@ -62,6 +62,25 @@
   
   <article class="post">
     <h1 class="post-title">
+      <a href="/blog/2015/08/19/Swift-Error-Handling.html">
+        Swift-er Error Handling
+      </a>
+    </h1>
+
+      <p class="post-meta"><time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time></p>
+
+    <p>My initial impression of do/try/catch in Swift 2 was that it would only make my code longer and more complex. I was comfortable using optionals and simply checking/ unwrapping them with if/let syntax. Further reading has prompted me to realize that the new error-handling model is better for several reasons:</p>
+
+<p>When you simply check that an optional is non-nil, you aren’t really handling the error. Throwing and catching errors forces you to deal with the errors rather than skip execution.
+Do/try/catch allows you to recover. If you catch the errors thrown by the method that you are calling in the do{} block, you’ll be able to recover and tell your user what’s going on.
+Writing your error enum (with ErrorType conformance) encourages you to think more intently about the possible error cases during development rather than when bugs start popping up.
+—–</p>
+
+
+  </article>
+  
+  <article class="post">
+    <h1 class="post-title">
       <a href="/blog/2015/08/19/Guard-Statements-and-Throwing-Errors.html">
         Guard Statements and Throwing Errors
       </a>
@@ -91,53 +110,15 @@ I’m excited to learn more about error handling, and how I can improve the read
 
   </article>
   
-  <article class="post">
-    <h1 class="post-title">
-      <a href="/blog/2015/08/19/Class-Functions-and-Swift-Extensions.html">
-        Using Class Functions in Swift Extensions
-      </a>
-    </h1>
-
-      <p class="post-meta"><time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time></p>
-
-    <p>During a recent experimentation with Swift’s extensions, I was reminded about the important distinctions between class and instance methods. I was writing a simple extension of UIColor to save me from retyping the rgb values and converting them to floats. My first attempt looked like this:</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">extension</span> <span class="bp">UIColor</span><span class="p">{</span>
-<span class="k">func</span> <span class="n">lightRedColor</span><span class="p">()</span><span class="o">-&gt;</span> <span class="bp">UIColor</span> <span class="p">{</span>
-<span class="k">return</span> <span class="bp">UIColor</span><span class="p">(</span><span class="nl">red</span><span class="p">:</span> <span class="mi">144</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">green</span><span class="p">:</span> <span class="mi">80</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">blue</span><span class="p">:</span> <span class="mi">89</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">alpha</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
-
-<p>When I went to declare my color variable, Xcode wouldn’t let me call my new function on UIColor. Instead, I would have had to create an instance using a predefined public class method declared in UIColor and then call my function on that instance.</p>
-
-<p>It might look like this garbage:</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">myColor</span> <span class="o">=</span> <span class="bp">UIColor</span><span class="p">.</span><span class="n">lightGrayColor</span><span class="p">().</span><span class="n">lightRedColor</span><span class="p">()</span></code></pre></figure>
-
-<p>When I looked at the declaration for .lightGrayColor(), I realized that it must be declared as a class function, not as an instance method.</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">extension</span> <span class="bp">UIColor</span><span class="p">{</span>
-<span class="k">class</span> <span class="k">func</span> <span class="n">lightRedColor</span><span class="p">()</span><span class="o">-&gt;</span> <span class="bp">UIColor</span> <span class="p">{</span>
-<span class="k">return</span> <span class="bp">UIColor</span><span class="p">(</span><span class="nl">red</span><span class="p">:</span> <span class="mi">144</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">green</span><span class="p">:</span> <span class="mi">80</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">blue</span><span class="p">:</span> <span class="mi">89</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span> <span class="nl">alpha</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
-
-<p>And now, I can call my function on UIColor.</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">myColor</span> <span class="o">=</span> <span class="bp">UIColor</span><span class="p">.</span><span class="n">lightRedColor</span><span class="p">()</span></code></pre></figure>
-
-<p>It was a simple error, but it served as a good reminder to me to pay attention to when I should be marking my functions with the class keyword.</p>
-
-
-  </article>
-  
 </div>
 
 <div class="row text-center">
 <div class="pagination">
   
-  
-    <span class="pagination-item older">Older</span>
+
+  <a class="pagination-item older" 
+     href="/blog/page4/">Older</a>
+
 
   
   

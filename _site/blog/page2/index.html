@@ -62,6 +62,38 @@
   
   <article class="post">
     <h1 class="post-title">
+      <a href="/blog/2015/08/28/Generic-Types.html">
+        Generic Types
+      </a>
+    </h1>
+
+      <p class="post-meta"><time datetime="2015-08-28T00:00:00-04:00" class="post-date">28 Aug 2015</time></p>
+
+    <p>Swift is a fantastic programming language for many reasons. For beginners and experienced programmers alike, Swift offers a lot. As someone new to programming, Swift’s syntax is expressive and easy to understand. Experienced programmers will enjoy Swift’s modern language features and capabilities. Generics are interesting to me, and I’ve become more comfortable with them as I’ve learned more about Swift.</p>
+
+<h3 id="about-generics">About generics</h3>
+<p>Generics are self-describing. In Swift, generics allow you to write flexible code that avoids redundancy, but retains clarity. As an example, the swap method in the Swift standard library enables you to swap two instances, as long as they are of the same type. This is achieved through generics.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">var</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="n">print</span><span class="p">(</span><span class="s">&quot;a is now \(a) and b is now \(b)&quot;</span><span class="p">)</span>
+<span class="c1">//prints &quot;a is now 2 and b is now 1&quot;</span></code></pre></figure>
+
+<p>Arrays and Dictionaries are, in fact, generic collections. They hold values of any specified type.</p>
+
+<h3 id="type-parameters">Type parameters</h3>
+<p>You specify a name for a generic parameter by putting the <em>placeholder</em> after the function name, in angle brackets.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="n">swapTwoValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">inout</span> <span class="nl">a</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="k">inout</span> <span class="n">_</span> <span class="nl">b</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span></code></pre></figure>
+
+<p>In the method body, you can use the generic type parameter in the place where you might normally use a local variable name.</p>
+
+  </article>
+  
+  <article class="post">
+    <h1 class="post-title">
       <a href="/blog/2015/08/24/Reference-Cycles.html">
         Reference Cycles
       </a>
@@ -191,32 +223,14 @@ When you have two instances that have strong references to each-other, the refer
 
   </article>
   
-  <article class="post">
-    <h1 class="post-title">
-      <a href="/blog/2015/08/19/Swift-Error-Handling.html">
-        Swift-er Error Handling
-      </a>
-    </h1>
-
-      <p class="post-meta"><time datetime="2015-08-19T00:00:00-04:00" class="post-date">19 Aug 2015</time></p>
-
-    <p>My initial impression of do/try/catch in Swift 2 was that it would only make my code longer and more complex. I was comfortable using optionals and simply checking/ unwrapping them with if/let syntax. Further reading has prompted me to realize that the new error-handling model is better for several reasons:</p>
-
-<p>When you simply check that an optional is non-nil, you aren’t really handling the error. Throwing and catching errors forces you to deal with the errors rather than skip execution.
-Do/try/catch allows you to recover. If you catch the errors thrown by the method that you are calling in the do{} block, you’ll be able to recover and tell your user what’s going on.
-Writing your error enum (with ErrorType conformance) encourages you to think more intently about the possible error cases during development rather than when bugs start popping up.
-—–</p>
-
-
-  </article>
-  
 </div>
 
 <div class="row text-center">
 <div class="pagination">
   
 
-  <a class="pagination-item older" href="/blog/page3/">Older</a>
+  <a class="pagination-item older" 
+     href="/blog/page3/">Older</a>
 
 
   
