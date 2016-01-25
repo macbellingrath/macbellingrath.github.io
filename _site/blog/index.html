@@ -48,6 +48,9 @@
                     <li>
 						<a href="http://macbellingrath.com/resume">CV</a>
 					</li>
+                    <li>
+                        <a href="http://macbellingrath.com/feed.xml">Feed</a>
+                    </li>
 				</ul>
 			</div>
 		</nav>
@@ -142,7 +145,7 @@ The installer will install an Xcode toolchain, which includes the resources you 
 <p>This returns:</p>
 
 <blockquote>
-  <p>{ “greeting”: “2016-01-25 14:26:22 +0000” }</p>
+  <p>{ “date”: “2016-01-25 14:26:22 +0000” }</p>
 </blockquote>
 
 <p>In order to test the server out, run <strong>$ swift build</strong>. An executable will be put in <em>.build/debug/server</em> . Run the executable from there, and make sure that your ports are open. Navigate to the port that you specified when you created your server (ie: localhost: 8080) and a route that you created in your swift file (“/date”). Voila, a simple server, written in Swift!</p>
