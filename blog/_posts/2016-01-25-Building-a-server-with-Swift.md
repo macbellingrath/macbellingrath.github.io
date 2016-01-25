@@ -32,11 +32,16 @@ let package = Package(
 Then, run **$ swift build**. You should see it fetch the dependency and build it in the directory you just created.
 
 > Cloning https://github.com/tannernelson/vapor.git
- Using version 1.0.5 of package vapor
- Compiling Swift Module 'Vapor' (12 sources)
- Linking Library:  .build/debug/Vapor.a
- Compiling Swift Module 'server' (1 sources)
- Linking Executable:  .build/debug/server
+
+> Using version 1.0.5 of package vapor
+
+> Compiling Swift Module 'Vapor' (12 sources)
+ 
+> Linking Library:  .build/debug/Vapor.a
+ 
+> Compiling Swift Module 'server' (1 sources)
+ 
+> Linking Executable:  .build/debug/server 
 
 In your project directory, create a file named main.swift, and we'll import our module.
 {% highlight swift %}
