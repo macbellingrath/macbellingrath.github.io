@@ -14,7 +14,7 @@ baseurl: ""
 url: "http://macbellingrath.com" # the base hostname & protocol for your site
 twitter_username: mbellingrath
 github_username:  macbellingrath
-highlighter: pygments
+highlighter: rouge 
 
 # Assets
 #

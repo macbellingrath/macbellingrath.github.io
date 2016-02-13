@@ -13,7 +13,7 @@ I find the constant change and improvement in programming motivating and excitin
 **Likes:** Swift, Objective-C, iOS, UIKit, reactive-cocoa, firebase, realm, Xcode, lldb, XCTest, quick, core-data, JSON, REST, Alamofire, NSURLSession, git, GitHub, continuous-integration
 
 ---
-##Experience
+## Experience
 
 **iOS Developer**, Hedo, Inc., *Current*
 
@@ -44,7 +44,7 @@ Salesforce, SQL, HubSpot, Infusionsoft
 
 ---
 
-##Education
+## Education
 
 **Mobile Engineering**, Iron Yard, *2015 - 2015*
 
@@ -68,7 +68,7 @@ mysql, ms-access, HTML, css, javascript, photoshop, adobe-illustrator, sketch
 
 ---
 
-##Certifications
+## Certifications
 
 **Certificate in iOS Development and Mobile Engineering  Iron Yard**, *2015 - 2015*
 
@@ -77,7 +77,7 @@ mysql, ms-access, HTML, css, javascript, photoshop, adobe-illustrator, sketch
 
 ---
 
-##Projects &amp; Interests
+## Projects &amp; Interests
 
 **GitHub - Wanderful**, [GitHub](https://github.com/mapthefuture/iOS), *November 2015 - February 2016*
 
@@ -125,7 +125,7 @@ Built native mobile application.
 
 ---
 
-##Writing
+## Writing
 
 **Swift Generics**, [Link](http://macbellingrath.com/blog/2015/08/28/Generic-Types.html)
 
