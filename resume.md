@@ -9,10 +9,12 @@ Programming enables me to translate ideas into products that can be shared with 
 I find the constant change and improvement in programming motivating and exciting.
 
 ---
+
 ## Technical Skills
 **Likes:** Swift, Objective-C, iOS, UIKit, reactive-cocoa, firebase, realm, Xcode, lldb, XCTest, quick, core-data, JSON, REST, Alamofire, NSURLSession, git, GitHub, continuous-integration
 
 ---
+
 ## Experience
 
 **iOS Developer**, Hedo, Inc., *Current*
@@ -71,8 +73,6 @@ mysql, ms-access, HTML, css, javascript, photoshop, adobe-illustrator, sketch
 ## Certifications
 
 **Certificate in iOS Development and Mobile Engineering  Iron Yard**, *2015 - 2015*
-
-
 
 
 ---
